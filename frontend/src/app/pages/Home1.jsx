@@ -271,7 +271,7 @@ const Home1 = () => {
                 Sign Up
               </h1>
               <h1 className="text-sm font-semibold mb-6 text-gray-500 text-center">
-                Join to Our Community with all time access and free{" "}
+                Join to Our Community with all time access and free..........{" "}
               </h1>
               <div className="mt-4 flex flex-col lg:flex-row items-center justify-between">
                 <div className="w-full lg:w-1/2 mb-2 lg:mb-0">
