@@ -1,9 +1,9 @@
-'use client'
-import React from "react";
+import React from 'react'
 
 const Home1 = () => {
   return (
     <div>
+<<<<<<< HEAD
       <>
         {/* component */}
         <div className="flex h-screen">
@@ -390,8 +390,11 @@ const Home1 = () => {
           </div>
         </div>
       </>
+=======
+      
+>>>>>>> 0f8947e3beed20f653e991290a36538efb3dcc22
     </div>
-  );
-};
+  )
+}
 
 export default Home1;
