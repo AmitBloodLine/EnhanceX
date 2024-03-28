@@ -30,7 +30,7 @@ export default function Contact() {
           Contact Us
         </h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
-          Aute magna irure deserunt veniam aliqua magna enim voluptate.
+          Aute magna irure deserunt veniam aliqua.
         </p>
       </div>
       <form
