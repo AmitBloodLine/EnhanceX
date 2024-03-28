@@ -161,11 +161,12 @@ export default function Signup() {
                           Sign Up
                         </button>
                       </div>
-                      <a href="#">Already Have Account?</a>
+                      <a 
+                      className="text-gray-700 text-md"
+                      href="#">Already Have Account?</a>
                     </form>
                   </div>
-                </div>
-          
+                </div>          
               </div>
             </div>
           </div>
