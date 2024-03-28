@@ -1,9 +1,29 @@
 'use client'
 import React from "react";
-
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 import Navbar from '@/components/Navbar';
 
 export default function Signup() {
+
+  const loginValidationSchema = Yup.object().shape({
+    username: Yup.string().required('Required'),
+    email: Yup.string().required('Email is required').email('Email is Invalid'),
+    password: Yup.string().required('Password is required')
+  });
+
+  const signupForm = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+      username:'',
+    },
+    onSubmit: (values) => {
+      console.log(values);
+    },
+    validationSchema: loginValidationSchema
+  });
+
   return (
     <>
       <Navbar transparent />
@@ -12,10 +32,7 @@ export default function Signup() {
           <div
             className="absolute top-0 w-full h-full bg-white"
             style={{
-            //   backgroundImage:
-            //     "url(" + require("assets/img/register_bg_2.png").default + ")",
-            //   backgroundSize: "100%",
-            //   backgroundRepeat: "no-repeat"
+
             }}
           ></div>
           <div className="container mx-auto px-4 h-full">
@@ -46,7 +63,7 @@ export default function Signup() {
                     <hr className="mt-6 border-b-1 border-gray-400" />
                   </div>
                   <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-                    <form>
+                    <form onSubmit={signupForm.handleSubmit}>
                     <div className="relative w-full mb-3">
                         <label
                           className="block uppercase text-gray-700 text-xs font-bold mb-2"
@@ -56,10 +73,17 @@ export default function Signup() {
                         </label>
                         <input
                           type="text"
+                          id="username"
+                          onChange={signupForm.handleChange}
+                          value={signupForm.values.username}
                           className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                           placeholder="Username"
                           style={{ transition: "all .15s ease" }}
                         />
+                        {
+                          signupForm.touched.username && signupForm.errors.username &&
+                          <h1 className="text-danger">{signupForm.errors.username}</h1>
+                        }
                       </div>
 
                       <div className="relative w-full mb-3">
@@ -70,11 +94,18 @@ export default function Signup() {
                           Email
                         </label>
                         <input
-                          type="email"
+                          type="text"
+                          id="email"
+                          onChange={signupForm.handleChange}
+                          value={signupForm.values.email}
                           className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                           placeholder="Email"
                           style={{ transition: "all .15s ease" }}
                         />
+                        {
+                          signupForm.touched.email &&
+                          <small className="text-danger">{signupForm.errors.email}</small>
+                        }
                       </div>
 
                       <div className="relative w-full mb-3">
@@ -86,10 +117,17 @@ export default function Signup() {
                         </label>
                         <input
                           type="password"
+                          id="password"
+                          onChange={signupForm.handleChange}
+                          value={signupForm.values.password}
                           className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                           placeholder="Password"
                           style={{ transition: "all .15s ease" }}
                         />
+                         {
+                          signupForm.touched.password &&
+                          <small className="text-danger">{signupForm.errors.password}</small>
+                        }
                       </div>
 
                       <div className="relative w-full mb-3">
@@ -101,16 +139,23 @@ export default function Signup() {
                         </label>
                         <input
                           type="password"
+                          id="Confirmpassword"
+                          onChange={signupForm.handleChange}
+                          value={signupForm.values.Confirmpassword}
                           className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                           placeholder="Confirm Password"
                           style={{ transition: "all .15s ease" }}
                         />
+                        {
+                          signupForm.touched.Confirmpassword &&
+                          <small className="text-danger">{signupForm.errors.password}</small>
+                        }
                       </div>
                      
                       <div className="text-center mt-6">
                         <button
                           className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
-                          type="button"
+                          type="submit"
                           style={{ transition: "all .15s ease" }}
                         >
                           Sign Up

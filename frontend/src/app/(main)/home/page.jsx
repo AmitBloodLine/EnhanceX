@@ -1,10 +1,7 @@
 import React from "react";
-import Navbar from "@/components/Navbar";
-
 const Home = () => {
   return (
     <>
-      <Navbar />
       <main>
         <div
           className="relative pt-16 pb-32 flex content-center items-center justify-center"
