@@ -23,7 +23,6 @@ export default function Signup() {
     onSubmit: (values) => {
         console.log(values);
 
-        // sending request to backend
         fetch('http://localhost:5000/user/add', {
             method: 'POST',
             body: JSON.stringify(values),
