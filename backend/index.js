@@ -1,13 +1,29 @@
-const express = require('express');
+const express = require("express");
+const cors = require("cors");
+
 const app = express();
-const cors = require('cors');
+
+const userRouter = require("./routers/userRouter");
+
+app.use(
+  cors({
+    origin: ["http://localhost:3000"],
+  })
+);
+
+app.use(express.json());
+app.use("/user", userRouter);
 
 const port = 5000;
 
-app.listen(port,() => {
-  console.log("Server Started");
+app.get("/", (req, res) => {
+  res.send("response from express");
 });
 
-app.use(cors ({
-    origin: ['http://localhost:3000']
-}));
+app.get("/add", (req, res) => {
+  res.send("add response from express");
+});
+
+app.listen(port, () => {
+  console.log("express server open");
+});

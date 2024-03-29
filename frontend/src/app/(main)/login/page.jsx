@@ -1,24 +1,23 @@
-'use client'
+"use client";
 import React from "react";
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 export default function Login() {
-
   const loginValidationSchema = Yup.object().shape({
-    email: Yup.string().required('Email is required').email('Email is Invalid'),
-    password: Yup.string().required('Password is required')
+    email: Yup.string().required("Email is required").email("Email is Invalid"),
+    password: Yup.string().required("Password is required"),
   });
 
   const loginForm = useFormik({
     initialValues: {
-      email: '',
-      password: ''
+      email: "",
+      password: "",
     },
     onSubmit: (values) => {
       console.log(values);
     },
-    validationSchema: loginValidationSchema
+    validationSchema: loginValidationSchema,
   });
 
   return (
@@ -30,7 +29,7 @@ export default function Login() {
             style={{
               backgroundColor: "#31363F",
               backgroundSize: "100%",
-              backgroundRepeat: "no-repeat"
+              backgroundRepeat: "no-repeat",
             }}
           ></div>
           <div className="container mx-auto px-4 h-full">
@@ -58,10 +57,11 @@ export default function Login() {
                           placeholder="Email"
                           style={{ transition: "all .15s ease" }}
                         />
-                        {
-                          loginForm.touched.email && loginForm.errors.email &&
-                          <small className="text-danger">{loginForm.errors.email}</small>
-                        }
+                        {loginForm.touched.email && loginForm.errors.email && (
+                          <small className="text-danger">
+                            {loginForm.errors.email}
+                          </small>
+                        )}
                       </div>
                       <div className="relative w-full mb-3">
                         <label
@@ -79,10 +79,12 @@ export default function Login() {
                           placeholder="Password"
                           style={{ transition: "all .15s ease" }}
                         />
-                        {
-                          loginForm.touched.password && loginForm.errors.password &&
-                          <small className="text-danger">{loginForm.errors.password}</small>
-                        }
+                        {loginForm.touched.password &&
+                          loginForm.errors.password && (
+                            <small className="text-danger">
+                              {loginForm.errors.password}
+                            </small>
+                          )}
                       </div>
                       <div>
                         <label className="inline-flex items-center cursor-pointer">
@@ -108,13 +110,13 @@ export default function Login() {
                         </button>
                       </div>
                     </form>
-                  </div> 
+                  </div>
                 </div>
                 <div className="flex flex-wrap mt-6">
                   <div className="w-1/2">
                     <a
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                       className="text-gray-300"
                     >
                       <small>Forgot password?</small>
@@ -123,7 +125,7 @@ export default function Login() {
                   <div className="w-1/2 text-right">
                     <a
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                       className="text-gray-300"
                     >
                       <small>Create new account</small>
@@ -137,4 +139,4 @@ export default function Login() {
       </main>
     </>
   );
-};
+}

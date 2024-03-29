@@ -3,6 +3,7 @@ import React from "react";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Navbar from '@/components/Navbar';
+import { enqueueSnackbar } from "notistack";
 
 export default function Signup() {
 
@@ -14,15 +15,37 @@ export default function Signup() {
 
   const signupForm = useFormik({
     initialValues: {
-      email: '',
-      password: '',
-      username:'',
+        email: '',
+        password: '',
+        confirmpassword: '',
+        
     },
     onSubmit: (values) => {
-      console.log(values);
+        console.log(values);
+
+        // sending request to backend
+        fetch('http://localhost:5000/user/add', {
+            method: 'POST',
+            body: JSON.stringify(values),
+            headers: {
+                'Content-Type' : 'application/json'
+            }
+        })
+        .then((response) => {
+            console.log(response.status);
+            if(response.status === 200){
+                enqueueSnackbar('Post uploaded successfully', { variant: 'success' })
+            }else{
+                enqueueSnackbar('Something went wrong', { variant: 'error' })
+            }
+        }).catch((err) => {
+            console.log(err);
+            enqueueSnackbar('Something went wrong', { variant: 'error' });
+        });
+
     },
-    validationSchema: loginValidationSchema
-  });
+    validationSchema : loginValidationSchema
+});
 
   return (
     <>

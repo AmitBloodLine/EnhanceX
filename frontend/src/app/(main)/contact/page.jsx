@@ -3,6 +3,8 @@ import React from "react";
 import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@headlessui/react";
+import * as Yup from "yup";
+import { useFormik } from "formik";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -10,6 +12,22 @@ function classNames(...classes) {
 
 export default function Contact() {
   const [agreed, setAgreed] = useState(false);
+
+  const loginValidationSchema = Yup.object().shape({
+    email: Yup.string().required("Email is required").email("Email is Invalid"),
+    password: Yup.string().required("Password is required"),
+  });
+
+  const contactForm = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    onSubmit: (values) => {
+      console.log(values);
+    },
+    validationSchema: loginValidationSchema,
+  });
 
   return (
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
@@ -49,11 +67,16 @@ export default function Contact() {
             <div className="mt-2.5">
               <input
                 type="text"
-                name="first-name"
-                id="first-name"
+                name="firstName"
+                id="firstName"
+                onChange={contactForm.handleChange}
+                value={contactForm.values.firstName}
                 autoComplete="given-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
+              {contactForm.touched.firstName && contactForm.errors.firstName && (
+                <small className="text-danger">{contactForm.errors.firstName}</small>
+              )}
             </div>
           </div>
           <div>
@@ -66,11 +89,16 @@ export default function Contact() {
             <div className="mt-2.5">
               <input
                 type="text"
-                name="last-name"
-                id="last-name"
+                name="lastName"
+                id="lastName"
+                onChange={contactForm.handleChange}
+                value={contactForm.values.lastName}
                 autoComplete="family-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
+              {contactForm.touched.lastName && contactForm.errors.lastName && (
+                <small className="text-danger">{contactForm.errors.lastName}</small>
+              )}
             </div>
           </div>
 
@@ -83,12 +111,17 @@ export default function Contact() {
             </label>
             <div className="mt-2.5">
               <input
-                type="email"
+                type="text"
                 name="email"
                 id="email"
+                onChange={contactForm.handleChange}
+                value={contactForm.values.email}
                 autoComplete="email"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
+              {contactForm.touched.email && contactForm.errors.email && (
+                <small className="text-danger">{contactForm.errors.email}</small>
+              )}
             </div>
           </div>
           <div className="sm:col-span-2">
@@ -118,11 +151,16 @@ export default function Contact() {
               </div>
               <input
                 type="tel"
-                name="phone-number"
-                id="phone-number"
+                name="phoneNumber"
+                id="phoneNumber"
                 autoComplete="tel"
+                onChange={contactForm.handleChange}
+                value={contactForm.values.phoneNumber}
                 className="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
+              {contactForm.touched.phoneNumber && contactForm.errors.phoneNumber && (
+                <small className="text-danger">{contactForm.errors.phoneNumber}</small>
+              )}
             </div>
           </div>
           <div className="sm:col-span-2">
@@ -136,10 +174,15 @@ export default function Contact() {
               <textarea
                 name="message"
                 id="message"
+                onChange={contactForm.handleChange}
+                value={contactForm.values.message}
                 rows={4}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 defaultValue={""}
               />
+              {contactForm.touched.message && contactForm.errors.message && (
+                <small className="text-danger">{contactForm.errors.message}</small>
+              )}
             </div>
           </div>
           <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2">

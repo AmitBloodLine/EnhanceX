@@ -13,7 +13,7 @@ const Home = () => {
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
-                "url('https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148865392.jpg?t=st=1711548793~exp=1711552393~hmac=3438e3b84742ec9e88f487298e229c53b050c406db8ad75e126d912cd49efd04&w=1380')",
+                "url('https://img.freepik.com/free-vector/abstract-banner-with-low-poly-plexus-design_1048-19840.jpg?t=st=1711696807~exp=1711700407~hmac=56a856502187d37d30a0cd4091fa26fa7e028b1b3e9208a5d38e3035996af5f1&w=1380')",
             }}
           >
             <span
