@@ -4,6 +4,7 @@ const cors = require("cors");
 const app = express();
 
 const userRouter = require("./routers/userRouter");
+const ContactRouter = require("./routers/contactRouter")
 
 app.use(
   cors({
@@ -13,6 +14,7 @@ app.use(
 
 app.use(express.json());
 app.use("/user", userRouter);
+app.use("/contact", ContactRouter);
 
 const port = 5000;
 

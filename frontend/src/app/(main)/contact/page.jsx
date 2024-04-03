@@ -20,11 +20,32 @@ export default function Contact() {
 
   const contactForm = useFormik({
     initialValues: {
+      firstName: "",
+      lastName: "",
       email: "",
       password: "",
     },
     onSubmit: (values) => {
       console.log(values);
+
+      fetch('http://localhost:5000/user/add', {
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: {
+            'Content-Type' : 'application/json'
+        }
+    })
+    .then((response) => {
+        console.log(response.status);
+        if(response.status === 200){
+            enqueueSnackbar('Post uploaded successfully', { variant: 'success' })
+        }else{
+            enqueueSnackbar('Something went wrong', { variant: 'error' })
+        }
+    }).catch((err) => {
+        console.log(err);
+        enqueueSnackbar('Something went wrong', { variant: 'error' });
+    });
     },
     validationSchema: loginValidationSchema,
   });

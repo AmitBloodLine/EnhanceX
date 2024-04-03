@@ -4,10 +4,13 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Navbar from '@/components/Navbar';
 import { enqueueSnackbar } from "notistack";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Signup() {
+  const router = useRouter()
 
-  const loginValidationSchema = Yup.object().shape({
+  const signupValidationSchema = Yup.object().shape({
     username: Yup.string().required('Required'),
     email: Yup.string().required('Email is required').email('Email is Invalid'),
     password: Yup.string().required('Password is required')
@@ -16,8 +19,9 @@ export default function Signup() {
   const signupForm = useFormik({
     initialValues: {
         email: '',
+        name: '',
         password: '',
-        confirmpassword: '',
+        confirmpassword: ''
         
     },
     onSubmit: (values) => {
@@ -34,7 +38,8 @@ export default function Signup() {
         .then((response) => {
             console.log(response.status);
             if(response.status === 200){
-                enqueueSnackbar('Post uploaded successfully', { variant: 'success' })
+                enqueueSnackbar('User Added successfully', { variant: 'success' })
+                router.push("/login")
             }else{
                 enqueueSnackbar('Something went wrong', { variant: 'error' })
             }
@@ -44,7 +49,7 @@ export default function Signup() {
         });
 
     },
-    validationSchema : loginValidationSchema
+    validationSchema : signupValidationSchema
 });
 
   return (
@@ -96,16 +101,16 @@ export default function Signup() {
                         </label>
                         <input
                           type="text"
-                          id="username"
+                          id="name"
                           onChange={signupForm.handleChange}
-                          value={signupForm.values.username}
+                          value={signupForm.values.name}
                           className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                           placeholder="Username"
                           style={{ transition: "all .15s ease" }}
                         />
                         {
-                          signupForm.touched.username && signupForm.errors.username &&
-                          <h1 className="text-danger">{signupForm.errors.username}</h1>
+                          signupForm.touched.name &&
+                          <small className="text-red-500">{signupForm.errors.name}</small>
                         }
                       </div>
 
@@ -127,7 +132,7 @@ export default function Signup() {
                         />
                         {
                           signupForm.touched.email &&
-                          <small className="text-danger">{signupForm.errors.email}</small>
+                          <small className="text-red-500">{signupForm.errors.email}</small>
                         }
                       </div>
 
@@ -149,7 +154,7 @@ export default function Signup() {
                         />
                          {
                           signupForm.touched.password &&
-                          <small className="text-danger">{signupForm.errors.password}</small>
+                          <small className="text-red-500">{signupForm.errors.password}</small>
                         }
                       </div>
 
@@ -162,16 +167,16 @@ export default function Signup() {
                         </label>
                         <input
                           type="password"
-                          id="Confirmpassword"
+                          id="confirmpassword"
                           onChange={signupForm.handleChange}
-                          value={signupForm.values.Confirmpassword}
+                          value={signupForm.values.confirmpassword}
                           className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                           placeholder="Confirm Password"
                           style={{ transition: "all .15s ease" }}
                         />
                         {
-                          signupForm.touched.Confirmpassword &&
-                          <small className="text-danger">{signupForm.errors.password}</small>
+                          signupForm.touched.confirmpassword &&
+                          <small className="text-red-500">{signupForm.errors.password}</small>
                         }
                       </div>
                      
@@ -184,9 +189,9 @@ export default function Signup() {
                           Sign Up
                         </button>
                       </div>
-                      <a 
+                      <Link 
                       className="text-gray-700 text-md"
-                      href="#">Already Have Account?</a>
+                      href="/login">Already Have Account?</Link>
                     </form>
                   </div>
                 </div>          

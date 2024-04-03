@@ -2,8 +2,13 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { enqueueSnackbar } from "notistack";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Login() {
+
+const router = useRouter();
   const loginValidationSchema = Yup.object().shape({
     email: Yup.string().required("Email is required").email("Email is Invalid"),
     password: Yup.string().required("Password is required"),
@@ -16,13 +21,38 @@ export default function Login() {
     },
     onSubmit: (values) => {
       console.log(values);
+      fetch("http://localhost:5000/user/authenticate", {
+        method: "POST",
+        body: JSON.stringify(values),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => {
+          console.log(response.status);
+          if (response.status === 200) {
+            enqueueSnackbar("User Login successfully", {
+              variant: "success",
+            });
+             router.push("/contact")
+          } else {
+            enqueueSnackbar("Something went wrong", { variant: "error" });
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+          enqueueSnackbar("Something went wrong", { variant: "error" });
+        });
     },
+
     validationSchema: loginValidationSchema,
   });
 
   return (
     <>
+    
       <main>
+      
         <section className="absolute w-full h-full">
           <div
             className="absolute top-0 w-full h-full bg-gray-900"
@@ -111,27 +141,29 @@ export default function Login() {
                       </div>
                     </form>
                   </div>
-                </div>
-                <div className="flex flex-wrap mt-6">
+                  <div className="flex flex-wrap mt-63 px-4 py-4">
+                  
                   <div className="w-1/2">
                     <a
-                      href="#pablo"
+                      href="#"
                       onClick={(e) => e.preventDefault()}
-                      className="text-gray-300"
+                      className="text-gray-700 font-semibold"
                     >
                       <small>Forgot password?</small>
                     </a>
                   </div>
                   <div className="w-1/2 text-right">
-                    <a
-                      href="#pablo"
+                    <Link
+                      href="/signup"
                       onClick={(e) => e.preventDefault()}
-                      className="text-gray-300"
+                      className="text-gray-700 font-semibold"
                     >
                       <small>Create new account</small>
-                    </a>
+                    </Link>
                   </div>
                 </div>
+                </div>
+              
               </div>
             </div>
           </div>
