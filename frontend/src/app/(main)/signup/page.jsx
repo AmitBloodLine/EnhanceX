@@ -2,26 +2,28 @@
 import React from "react";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import Navbar from '@/components/Navbar';
 import { enqueueSnackbar } from "notistack";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Navbar from "@/components/navbar";
 
 export default function Signup() {
   const router = useRouter()
 
   const signupValidationSchema = Yup.object().shape({
-    username: Yup.string().required('Required'),
+    username: Yup.string().required('Username required'),
     email: Yup.string().required('Email is required').email('Email is Invalid'),
-    password: Yup.string().required('Password is required')
+    password: Yup.string().required('Password is required'),
+    confirmPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords must match')
   });
 
   const signupForm = useFormik({
     initialValues: {
+        username: '',
         email: '',
         name: '',
         password: '',
-        confirmpassword: ''
+        confirmPassword: ''
         
     },
     onSubmit: (values) => {
@@ -82,7 +84,6 @@ export default function Signup() {
                           alt="..."
                           className="w-5 mr-1"
                           src="/assets/google.svg" 
-
                         />
                         Google
                       </button>
@@ -100,16 +101,16 @@ export default function Signup() {
                         </label>
                         <input
                           type="text"
-                          id="name"
+                          id="username"
                           onChange={signupForm.handleChange}
-                          value={signupForm.values.name}
+                          value={signupForm.values.username}
                           className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                           placeholder="Username"
                           style={{ transition: "all .15s ease" }}
                         />
                         {
-                          signupForm.touched.name &&
-                          <small className="text-red-500">{signupForm.errors.name}</small>
+                          signupForm.touched.username &&
+                          <small className="text-red-500">{signupForm.errors.username}</small>
                         }
                       </div>
 
@@ -166,16 +167,16 @@ export default function Signup() {
                         </label>
                         <input
                           type="password"
-                          id="confirmpassword"
+                          id="confirmPassword"
                           onChange={signupForm.handleChange}
-                          value={signupForm.values.confirmpassword}
+                          value={signupForm.values.confirmPassword}
                           className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                           placeholder="Confirm Password"
                           style={{ transition: "all .15s ease" }}
                         />
                         {
-                          signupForm.touched.confirmpassword &&
-                          <small className="text-red-500">{signupForm.errors.password}</small>
+                          signupForm.touched.confirmPassword &&
+                          <small className="text-red-500">{signupForm.errors.confirmPassword}</small>
                         }
                       </div>
                      
