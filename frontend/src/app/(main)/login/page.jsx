@@ -51,20 +51,28 @@ const router = useRouter();
   return (
     <>
     
-      <main className="min-h-screen flex items-center" style={
-        {backgroundImage: `url('')`,
-        backgroundSize: 'cover'
+      <main className="min-h-screen flex items-center"
+
+        style={
+        {backgroundImage: `url('https://wallpapercave.com/wp/wp9314317.jpg')`,
+        backgroundSize: 'cover',
         }}>
+
           <div className="container mx-auto px-4 h-full">
-            <div className="flex content-end items-center justify-end h-full">
+            <p className="text-7xl font-medium text-sky-400">
+              Welcome Back
+            </p>
+            <p className="pt-4 text-4xl text-white">
+              Login to your account
+            </p>
+            <div className="w-full flex justify-end">
               <div className="w-full lg:w-4/12 px-4">
-                .amjd.asjd.
-                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 border-0">
+                <div className=" flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 border-0">
                   <div className="rounded-t mb-0 px-6 py-6 text-center text-lg font-bold text-gray-700">
                   </div>
                   <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                     <form onSubmit={loginForm.handleSubmit}>
-                      <div className="relative w-full mb-3">
+                      <div className=" w-full mb-3">
                         <label
                           className="block uppercase text-gray-700 text-xs font-bold mb-2"
                           htmlFor="grid-password"
@@ -81,7 +89,7 @@ const router = useRouter();
                           style={{ transition: "all .15s ease" }}
                         />
                         {loginForm.touched.email && loginForm.errors.email && (
-                          <small className="text-danger">
+                          <small className="text-red-500">
                             {loginForm.errors.email}
                           </small>
                         )}
@@ -104,7 +112,7 @@ const router = useRouter();
                         />
                         {loginForm.touched.password &&
                           loginForm.errors.password && (
-                            <small className="text-danger">
+                            <small className="text-red-500">
                               {loginForm.errors.password}
                             </small>
                           )}
@@ -133,11 +141,11 @@ const router = useRouter();
                         </button>
                       </div>
                       <Link 
-                      className="text-gray-700 font-semibold "
+                      className="text-gray-700"
                       href="/signup">Create new account
                       </Link><br></br>
                       <Link 
-                      className="text-blue-700 font-semibold "
+                      className="text-blue-700"
                       href="#">Forgot Password?
                       </Link>                     
                     </form>
