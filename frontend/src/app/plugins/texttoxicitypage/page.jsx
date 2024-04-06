@@ -5,21 +5,24 @@ const page = () => {
   return (
     <div>
       <div
-        className="bg-cover bg-center h-96 bg-no-repeat"
+        className="bg-cover bg-center h-96"
         style={{
-          backgroundImage: `url('https://murf.ai/resources/media/posts/87/5-Best-Speech-to-Text-APIs-in-2021-1.png')`,
+          backgroundImage: `url('https://i.pinimg.com/564x/41/c9/80/41c98073a8e11ecd0bcb8157bfb1747f.jpg')`,
         }}
       ></div>
       <div className="grid grid-cols-12">
         <div className="col-span-4">
           <h3 className="text-6xl p-10 font-medium text-white">
-            Speech Recognition
+            Text Toxicity Detection
           </h3>
           <p className="text-xl p-10 font-normal text-white">
-            Speech Recognition converts spoken words into text, facilitating
-            functions such as virtual assistants and live captioning. It
-            operates as a program capable of recognizing spoken words and
-            transforming them into readable text.
+            Text toxicity detection entails recognizing harmful or offensive
+            language. Text toxicity detection models are designed to
+            automatically identify and classify text inputs that contain
+            harmful, offensive, or toxic language. These models play a crucial
+            role in maintaining safe and respectful online environments by
+            flagging inappropriate content in social media platforms, forums,
+            comment sections, and other online communities.
           </p>
         </div>
         <div className="col-span-8">
