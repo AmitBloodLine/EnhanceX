@@ -12,6 +12,16 @@ const page = () => {
         >
             
         </div>
+        <div className='grid grid-cols-12'>
+          <div className='col-span-4'>
+            <h3>Plugin Title</h3>
+            <p>Plugin Description</p>
+          </div>
+          <div className='col-span-8'>
+            {/* code block */}
+            code block here
+          </div>
+        </div>
     </div>
   )
 }
