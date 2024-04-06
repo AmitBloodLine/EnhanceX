@@ -19,7 +19,7 @@ const page = () => {
               the most basic information like what and where of the objects.
             </p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">View Plugin</button>
+              <button className="btn btn-primary">Plugin Details</button>
             </div>
           </div>
         </div>

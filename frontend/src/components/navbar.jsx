@@ -7,13 +7,10 @@ const Navbar = () => {
             <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
               <a href="#" className="flex items-center">
                 <img
-                  src=""
-                  className="h-6 mr-3 sm:h-9"
-                  alt="Logo"
+                  src="/AI-EnhanceX.png"
+                  className="h-14 mr-3 sm:h-14"
+                  alt="AI EnhanceX"
                 />
-                <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-                  AI EnhanceX
-                </span>
               </a>
               <div className="flex items-center lg:order-2">
                 <div className="hidden mt-2 mr-4 sm:inline-block">

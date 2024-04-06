@@ -70,7 +70,7 @@ const router = useRouter();
                 <div className=" flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 border-0">
                   <div className="rounded-t mb-0 px-6 py-6 text-center text-lg font-bold text-gray-700">
                   </div>
-                  <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
+                  <div className="flex-auto px-4 lg:px-10 py-10 pt-0">  {/*add grid*/}
                     <form onSubmit={loginForm.handleSubmit}>
                       <div className=" w-full mb-3">
                         <label
