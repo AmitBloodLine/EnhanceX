@@ -1,7 +1,24 @@
-import React from "react";
-import { Card } from "flowbite-react";
+'use client';
+import React, { useEffect, useState } from "react";
+
 
 const page = () => {
+
+  const [plugin, setPlugin] = useState([]);
+
+
+  const fetchPlugin = async () => {
+    const res = await fetch("http://localhost:5000/plugin/getall");
+    console.log(res.status);
+    const data = await res.json()
+    console.log(data);
+    setPlugin(data);
+  }
+ useEffect(() => {
+   fetchPlugin();
+ },[])
+
+    
   return (
     <div>
       <div className="hero bg-base-200 h-96 pt-20">
@@ -16,141 +33,34 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-3 object-cover p-40">
-        <div className="card bg-base-100">
-          <figure className="h-80">
-            <img
-              src="https://www.datasciencecentral.com/wp-content/uploads/2021/10/9712908078.jpeg"
-              alt="Object Detection"
-            />
-          </figure>
-          <div className="card-body bg-zinc-100">
-            <h2 className="card-title text-slate-950">Object Detection</h2>
-            <p className="text-slate-950">
-              Object detection aims to develop a computational model that offers
-              the most basic information like what and where of the objects.
-            </p>
-            <div className="card-actions justify-end">
-              <a
-                href="/plugins/objectpage"
-                className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
-              >
-                Plugin Details
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div className="card bg-base-100">
-          <figure className="h-80">
-            <img
-              src="https://a.storyblok.com/f/139616/1200x800/cfeba5ab5e/image-classification.webp"
-              alt="Image Classification"
-            />
-          </figure>
-          <div className="card-body bg-zinc-100">
-            <h2 className="card-title text-slate-950">Image Classfication</h2>
-            <p className="text-slate-950">
-              An image classification module is designed to recognize different
-              types or classes of images.
-            </p>
-            <div className="card-actions justify-end">
-              <a
-                href="/plugins/imagepage"
-                className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
-              >
-                Plugin Details
-              </a>
+      {
+        plugin.map((para) => {
+          return( 
+             <div className="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-3 object-cover p-40 ">
+      
+            <div className="card w-96 bg-base-100 shadow-xl">
+              <figure><img src={"http://localhost:5000/" + para.image} alt="Shoes" /></figure>
+              <div className="card-body">
+              <h2 className="card-title text-white">{para.title}</h2>
+                <p className="text-white py-4">
+                {para.description}
+                </p>
+                <div className="card-actions justify-end">
+                <a
+                    href="/plugins/objectpage"
+                    className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
+                  >
+                    Plugin Details
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div className="card bg-base-100 shadow-xl">
-          <figure className="h-80">
-            <img
-              src="https://d17ocfn2f5o4rl.cloudfront.net/wp-content/uploads/2020/08/Hand-Tracking-and-Gesture-Recognition-Using-AI_-Applications-and-Challenges.jpg"
-              alt="Gesture Recognition"
-            />
-          </figure>
-          <div className="card-body bg-zinc-100">
-            <h2 className="card-title text-slate-950">Gesture Recognition</h2>
-            <p className="text-slate-950">
-              Gesture recognition is a specialized field within computer vision
-              and machine learning. It revolves around the identification and
-              interpretation of human gestures.
-            </p>
-            <div className="card-actions justify-end">
-              <a
-                href="/plugins/gesturepage"
-                className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
-              >
-                Plugin Details
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="card bg-base-100 shadow-xl">
-          <figure className="h-80">
-            <img
-              src="https://i.pinimg.com/564x/54/8e/86/548e86df3f8e0e1e8c5dacdd0b419205.jpg"
-              alt="Text Toxicity"
-            />
-          </figure>
-          <div className="card-body bg-zinc-100">
-            <h2 className="card-title text-slate-950">Text Toxicity</h2>
-            <p className="text-slate-950">
-              Text toxicity detection entails recognizing harmful or offensive
-              language.
-            </p>
-            <div className="card-actions justify-end">
-              <a
-                href="/plugins/texttoxicitypage"
-                className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
-              >
-                Plugin Details
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="card bg-base-100 shadow-xl">
-          <figure className="h-80">
-            <img
-              src="https://www.folio3.ai/blog/wp-content/uploads/2023/02/Untitled-design-24.jpg"
-              alt="Speech Recognition"
-            />
-          </figure>
-          <div className="card-body bg-zinc-100">
-            <h2 className="card-title text-slate-950">Speech Recognition</h2>
-            <p className="text-slate-950">
-              This plugin operates as a program capable of recognizing spoken
-              words and transforming them into readable text.
-            </p>
-            <div className="card-actions justify-end">
-              <a
-                href="/plugins/speechpage"
-                className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
-              >
-                Plugin Details
-              </a>
-            </div>
-          </div>
-        </div>
-        <Card
-          className="max-w-sm"
-          imgAlt="Meaningful alt text for an image that is not purely decorative"
-          imgSrc=""
-        >
-          <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
-          </h5>
-          <p className="font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
-          </p>
-        </Card>
-      </div>
+           </div>
+          )
+        })
+      }
+     
       <footer className="bg-base-200">
         <div className="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />

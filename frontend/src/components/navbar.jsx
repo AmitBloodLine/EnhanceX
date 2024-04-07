@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 const Navbar = () => {
   return (
-    <header className="fixed w-full">
+    <header className=" w-full">
           <nav className="border-gray-200 py-2.5 dark:bg-gray-900">
             <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
               <a href="#" className="flex items-center">

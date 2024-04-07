@@ -5,6 +5,8 @@ const app = express();
 
 const userRouter = require("./routers/userRouter");
 const ContactRouter = require("./routers/contactRouter")
+const PluginRouter = require("./routers/pluginRouter")
+const UtilRouter = require("./routers/util")
 
 app.use(
   cors({
@@ -15,16 +17,12 @@ app.use(
 app.use(express.json());
 app.use("/user", userRouter);
 app.use("/contact", ContactRouter);
+app.use("/plugin", PluginRouter);
+app.use("/util", UtilRouter);
 
 const port = 5000;
 
-app.get("/", (req, res) => {
-  res.send("response from express");
-});
-
-app.get("/add", (req, res) => {
-  res.send("add response from express");
-});
+app.use(express.static("./static/uploads"));
 
 app.listen(port, () => {
   console.log("express server open");
