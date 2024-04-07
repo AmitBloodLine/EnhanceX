@@ -139,7 +139,7 @@ export default function Login() {
                       Create new account
                     </Link>
                     <br></br>
-                    <Link className="text-blue-700" href="#">
+                    <Link className="text-blue-700" href="resetPassword">
                       Forgot Password?
                     </Link>
                   </form>
