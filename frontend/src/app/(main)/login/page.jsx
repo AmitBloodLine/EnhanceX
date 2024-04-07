@@ -33,7 +33,7 @@ export default function Login() {
             enqueueSnackbar("User Login successfully", {
               variant: "success",
             });
-            router.push("/contact");
+            router.push("/");
           } else {
             enqueueSnackbar("Something went wrong", { variant: "error" });
           }

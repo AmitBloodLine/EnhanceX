@@ -29,9 +29,15 @@ const page = () => {
         </div>
         <div className="col-span-8">
           <div className="col-span-8 p-10">
-            <div className="mockup-code p-10">
+            <div className="mockup-code">
               <pre data-prefix="$">
-                <code>npm i tailwind</code>
+                <code>npm i </code>
+              </pre>
+              <pre data-prefix=">" className="text-warning">
+                <code>installing...</code>
+              </pre>
+              <pre data-prefix=">" className="text-success">
+                <code>Done!</code>
               </pre>
             </div>
           </div>
