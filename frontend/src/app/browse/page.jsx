@@ -36,7 +36,7 @@ const page = () => {
           <div className="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-3 object-cover p-10 ">
             <div className="card w-96 bg-gray-800 shadow-lg shadow-cyan-500/50">
               <figure>
-                <img src={"http://localhost:5000/" + para.image} alt="Shoes" />
+                <img src={"http://localhost:5000/" + para.image} alt="card" />
               </figure>
               <div className="card-body">
                 <h2 className="card-title text-white">{para.title}</h2>
