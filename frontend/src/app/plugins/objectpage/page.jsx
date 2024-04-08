@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div>
       <div
-        className="bg-cover bg-center h-96"
+        className="bg-cover bg-center h-[500px]"
         style={{
           backgroundImage: `url('https://media.hackerearth.com/blog/wp-content/uploads/2018/08/shutterstock_668209624-1.jpg')`,
         }}

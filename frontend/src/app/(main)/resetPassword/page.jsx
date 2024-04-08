@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 
-const ResetPassword = () => {
+const resetPassword = () => {
   return (
     <div>
       <main className="w-full h-screen flex flex-col items-center justify-center bg-gray-50 sm:px-4">
@@ -40,4 +40,4 @@ const ResetPassword = () => {
   );
 };
 
-export default ResetPassword;
+export default resetPassword;

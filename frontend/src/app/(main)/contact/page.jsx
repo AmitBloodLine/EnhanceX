@@ -43,21 +43,24 @@ const Contact = () => {
     },
   });
   return (
-    <div>
-      <div className="bg-white py-10 sm:py-8 lg:py-12">
+    <div
+    className="h-screen bg-opacity-25"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1480506132288-68f7705954bd?q=80&w=2120&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+        }}>
+      <div className="bg-dark py-10 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           {/* text - start */}
           <div className="mb-10 md:mb-16">
-            <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
-              Get in touch
+            <h2 className="mb-4 text-center text-2xl font-bold text-violet-400 md:mb-6 lg:text-5xl">
+              Contact Us 
             </h2>
-            <p className="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
-              This is a section of some simple filler text, also known as
-              placeholder text. It shares some characteristics of a real written
-              text but is random or otherwise generated.
+            <p className="mx-auto max-w-screen-md text-center text-white md:text-lg">
+              Want to get in touch? We'd love to help you. Fill the below form to reach us.
             </p>
           </div>
           {/* text - end */}
+
           {/* form - start */}
           <form
             className="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2"
@@ -66,7 +69,7 @@ const Contact = () => {
             <div>
               <label
                 htmlFor="first-name"
-                className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+                className="mb-2 inline-block text-sm text-slate-200 sm:text-base"
               >
                 First name
               </label>
@@ -84,7 +87,7 @@ const Contact = () => {
             <div>
               <label
                 htmlFor="last-name"
-                className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+                className="mb-2 inline-block text-sm text-slate-200 sm:text-base"
               >
                 Last name
               </label>
@@ -103,7 +106,7 @@ const Contact = () => {
             <div className="sm:col-span-2">
               <label
                 htmlFor="email"
-                className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+                className="mb-2 inline-block text-sm text-slate-200 sm:text-base"
               >
                 Email
               </label>
@@ -121,7 +124,7 @@ const Contact = () => {
             <div className="sm:col-span-2">
               <label
                 htmlFor="subject"
-                className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+                className="mb-2 inline-block text-sm text-slate-200 sm:text-base"
               >
                 Number
               </label>
@@ -139,7 +142,7 @@ const Contact = () => {
             <div className="sm:col-span-2">
               <label
                 htmlFor="message"
-                className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+                className="mb-2 inline-block text-sm text-slate-200 sm:text-base"
               >
                 Message
               </label>
@@ -167,9 +170,9 @@ const Contact = () => {
           {/* form - end */}
         </div>
       </div>
-      <footer className="bg-white dark:bg-gray-800">
-        <div className="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
-          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <footer className="bg-base-200">
+        <div className="max-w-screen mx-auto lg:p-4">
+          <hr className="my-6 border-gray-200 dark:border-gray-700 lg:my-14" />
           <div className="text-center">
             <a
               href="#"
@@ -177,7 +180,7 @@ const Contact = () => {
             >
               <img
                 src="/AI-EnhanceX.png"
-                className="h-13 mr-3 sm:h-13"
+                className="h-12 mr-3"
                 alt="AI EnhanceX Logo"
               />
             </a>

@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div>
       <div
-        className="bg-cover bg-center h-96 bg-no-repeat"
+        className="bg-cover bg-center h-[500px] bg-no-repeat"
         style={{
           backgroundImage: `url('https://murf.ai/resources/media/posts/87/5-Best-Speech-to-Text-APIs-in-2021-1.png')`,
         }}

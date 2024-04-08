@@ -5,9 +5,9 @@ const page = () => {
   return (
     <div>
       <div
-        className="bg-cover bg-center h-96"
+        className="bg-cover bg-center h-[500px]"
         style={{
-          backgroundImage: `url('https://i.pinimg.com/564x/41/c9/80/41c98073a8e11ecd0bcb8157bfb1747f.jpg')`,
+          backgroundImage: `url('https://miro.medium.com/v2/resize:fit:1400/1*d4k-PRw-warACDpklCh1mw.png')`,
         }}
       ></div>
       <div className="grid grid-cols-12">

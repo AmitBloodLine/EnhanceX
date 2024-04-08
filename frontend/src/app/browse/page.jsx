@@ -1,11 +1,14 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const page = () => {
- return (
+  return (
     <div>
       <div className="hero bg-base-200 h-96">
-        <img src="https://solidwp.com/wp-content/uploads/2017/05/what-is-a-plugin.png" alt="" />
+        <img
+          src=""
+          alt=""
+        />
         <div className="text-center">
           <div className="max-w-md">
             <h1 className="text-5xl font-bold">Hello there</h1>
@@ -18,30 +21,137 @@ const page = () => {
         </div>
       </div>
 
-     
-          <div className="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-3 object-cover p-10 ">
-            <div className="card w-96 bg-gray-800 shadow-lg shadow-cyan-500/50">
-              <figure>
-                <img src="" alt="card" />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title text-white">title</h2>
-                <p className="text-white py-4">description</p>
-                <div className="card-actions justify-end">
-                  <a
-                    href="/plugins/objectpage"
-                    className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
-                  >
-                    Plugin Details
-                  </a>
-                </div>
-              </div>
+      <div className="grid gap-y-14 grid-cols-1 md:grid-cols-3 bg-cover py-24 pl-48">
+        <div className="card w-96 bg-gray-800 shadow-lg shadow-cyan-500/50">
+          <figure>
+            <img
+              src="https://www.datasciencecentral.com/wp-content/uploads/2021/10/9712908078.jpeg"
+              alt="card"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title text-white">Object Detection</h2>
+            <p className="text-white py-4">
+              Object detection is a computer vision task focused on identifying
+              and locating objects within images or video frames.
+            </p>
+            <div className="card-actions justify-end">
+              <a
+                href="/plugins/objectpage"
+                className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
+              >
+                Plugin Details
+              </a>
             </div>
           </div>
-  
-      <footer className="bg-white dark:bg-gray-800">
-        <div className="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
-          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        </div>
+
+        <div className="card w-96 bg-gray-800 shadow-lg shadow-cyan-500/50">
+          <figure>
+            <img
+              src="https://d17ocfn2f5o4rl.cloudfront.net/wp-content/uploads/2020/08/Hand-Tracking-and-Gesture-Recognition-Using-AI_-Applications-and-Challenges.jpg"
+              alt="card"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title text-white">Gesture Recognition</h2>
+            <p className="text-white py-4">
+              Gesture recognition is a specialized field within computer vision
+              and machine learning. It revolves around the identification and
+              interpretation of human gestures.
+            </p>
+            <div className="card-actions justify-end">
+              <a
+                href="/plugins/gesturepage"
+                className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
+              >
+                Plugin Details
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="card w-96 bg-gray-800 shadow-lg shadow-cyan-500/50">
+          <figure>
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/020/940/739/non_2x/toxic-text-written-and-white-line-with-broken-cement-wall-toxic-sign-word-on-street-photo.jpg"
+              alt="card"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title text-white">Text Toxicity</h2>
+            <p className="text-white py-4">
+              The system or component in question is crafted to handle models
+              detecting toxicity in text. Text toxicity detection entails
+              recognizing harmful or offensive language.
+            </p>
+            <div className="card-actions justify-end">
+              <a
+                href="/plugins/texttoxicitypage"
+                className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
+              >
+                Plugin Details
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="card w-96 bg-gray-800 shadow-lg shadow-cyan-500/50">
+          <figure>
+            <img
+              src="https://assets-global.website-files.com/614c82ed388d53640613982e/6475ee4ab445d8fcfe8b8c45_what%20is%20image%20classification.webp"
+              alt="card"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title text-white">Image Classification</h2>
+            <p className="text-white py-4">
+              An image classification module is designed to recognize different
+              types or classes of images. Its primary function involves labeling
+              photographs based on their content.
+            </p>
+            <div className="card-actions justify-end">
+              <a
+                href="/plugins/imagepage"
+                className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
+              >
+                Plugin Details
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="card w-96 bg-gray-800 shadow-lg shadow-cyan-500/50">
+          <figure>
+            <img
+              src="https://murf.ai/resources/media/posts/87/5-Best-Speech-to-Text-APIs-in-2021-1.png"
+              alt="card"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title text-white">Speech Recognition</h2>
+            <p className="text-white py-4">
+              The model converts spoken words into text, facilitating functions
+              such as virtual assistants and live captioning.t operates as a
+              program capable of recognizing spoken words and transforming them
+              into readable text.
+            </p>
+            <div className="card-actions justify-end">
+              <a
+                href="/plugins/speechpage"
+                className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
+              >
+                Plugin Details
+              </a>
+            </div>
+          </div>
+        </div>
+        <p className="">Some Content</p>
+      </div>
+
+      <footer className="bg-base-200">
+        <div className="max-w-screen-xl mx-auto lg:p-8">
+          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-4" />
           <div className="text-center">
             <a
               href="#"
@@ -49,7 +159,7 @@ const page = () => {
             >
               <img
                 src="/AI-EnhanceX.png"
-                className="h-13 mr-3 sm:h-13"
+                className="h-12 mr-3"
                 alt="AI EnhanceX Logo"
               />
             </a>

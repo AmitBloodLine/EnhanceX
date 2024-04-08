@@ -368,10 +368,9 @@ const about = () => {
           </div>
         </div>
       </div>
-      <footer className="bg-white dark:bg-gray-800">
-        <div className="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
-
-          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <footer className="">
+        <div className="max-w-screen-xl mx-auto lg:p-8">
+          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-4" />
           <div className="text-center">
             <a
               href="#"
@@ -379,7 +378,7 @@ const about = () => {
             >
               <img
                 src="/AI-EnhanceX.png"
-                className="h-13 mr-3 sm:h-13"
+                className="h-12 mr-3"
                 alt="AI EnhanceX Logo"
               />
             </a>

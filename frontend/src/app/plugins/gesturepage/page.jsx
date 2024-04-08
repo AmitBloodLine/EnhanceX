@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div>
       <div
-        className="bg-cover bg-center h-96"
+        className="bg-cover bg-center h-[500px]"
         style={{
           backgroundImage: `url('https://www.econsight.com/wp-content/uploads/2022/12/gesture-recognition.jpg')`,
         }}

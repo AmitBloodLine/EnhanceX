@@ -5,9 +5,9 @@ const page = () => {
   return (
     <div>
       <div
-        className="bg-cover h-96"
+        className="bg-cover h-[500px]"
         style={{
-          backgroundImage: `url('https://assets-global.website-files.com/614c82ed388d53640613982e/6475f0e3ba6ef9bc2836272b_image%20classification%20classification%20localization%20detection.webp')`,
+          backgroundImage: `url('https://lh5.googleusercontent.com/0tRwW_N8aqEBR2F-a6ggpbveaBw-20mYHdKA_EIPWfIHz7QisxcIJUdMtMYfC6g3u-1GuCOgeXd4nBfdzv9oYxprL_roc2msDIu5HrBVNlnybw_gnLP-jLo279pAi7MU5JppM7FlQuvROjvWDexxQxc')`,
         }}
       ></div>
       <div className="grid grid-cols-12">
