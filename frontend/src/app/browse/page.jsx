@@ -2,20 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 const page = () => {
-  const [plugin, setPlugin] = useState([]);
-
-  const fetchPlugin = async () => {
-    const res = await fetch("http://localhost:5000/plugin/getall");
-    console.log(res.status);
-    const data = await res.json();
-    console.log(data);
-    setPlugin(data);
-  };
-  useEffect(() => {
-    fetchPlugin();
-  }, []);
-
-  return (
+ return (
     <div>
       <div className="hero bg-base-200 h-96">
         <img src="https://solidwp.com/wp-content/uploads/2017/05/what-is-a-plugin.png" alt="" />
@@ -31,16 +18,15 @@ const page = () => {
         </div>
       </div>
 
-      {plugin.map((para) => {
-        return (
+     
           <div className="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-3 object-cover p-10 ">
             <div className="card w-96 bg-gray-800 shadow-lg shadow-cyan-500/50">
               <figure>
-                <img src={"http://localhost:5000/" + para.image} alt="card" />
+                <img src="" alt="card" />
               </figure>
               <div className="card-body">
-                <h2 className="card-title text-white">{para.title}</h2>
-                <p className="text-white py-4">{para.description}</p>
+                <h2 className="card-title text-white">title</h2>
+                <p className="text-white py-4">description</p>
                 <div className="card-actions justify-end">
                   <a
                     href="/plugins/objectpage"
@@ -52,8 +38,7 @@ const page = () => {
               </div>
             </div>
           </div>
-        );
-      })}
+  
       <footer className="bg-white dark:bg-gray-800">
         <div className="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />

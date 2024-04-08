@@ -7,7 +7,7 @@ const userRouter = require("./routers/userRouter");
 const ContactRouter = require("./routers/contactRouter")
 const PluginRouter = require("./routers/pluginRouter")
 const UtilRouter = require("./routers/util")
-const manageRouter = require("./routers/manageRouter")
+
 
 app.use(
   cors({
@@ -20,7 +20,7 @@ app.use("/user", userRouter);
 app.use("/contact", ContactRouter);
 app.use("/plugin", PluginRouter);
 app.use("/util", UtilRouter);
-app.use("/manage",manageRouter);
+
 
 const port = 5000;
 
