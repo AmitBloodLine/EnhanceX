@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { CopyBlock } from 'react-code-blocks';
+
 
 const page = () => {
   return (

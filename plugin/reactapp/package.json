@@ -7,12 +7,14 @@
     "start": "vite start",
     "dev": "vite",
     "build": "vite build",
+    "build:plugin": "parcel build src/main.jsx --no-source-maps",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "@tensorflow-models/coco-ssd": "^2.2.3",
     "@tensorflow/tfjs": "^4.17.0",
+    "parcel": "^2.12.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -20,10 +22,12 @@
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
+    "buffer": "^6.0.3",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "process": "^0.11.10",
     "vite": "^5.2.0"
   }
 }

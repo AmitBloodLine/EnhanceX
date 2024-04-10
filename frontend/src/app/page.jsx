@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 const Home = () => {
   return (
@@ -15,7 +16,7 @@ const Home = () => {
             <div className="mr-auto place-self-center lg:col-span-6">
               <h1 className="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">
                 Do it your way, <br />
-                the way your liking it.
+                the way you're liking it.
               </h1>
               <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
               JavaScript is utilized as the programming language for implementing <br /> AI functionalities within a component plugin on this website.
