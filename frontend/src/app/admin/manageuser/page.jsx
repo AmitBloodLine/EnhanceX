@@ -77,10 +77,10 @@ const manageUser = () => {
  
   return (
     <div>
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-        <div className="items-start justify-between md:flex">
-          <div className="max-w-lg flex">
-            <h3 className="text-white text-xl font-bold sm:text-2xl">
+      <div className="max-w-screen-lg mx-auto px-4 md:px-8">
+        <div className="items-start justify-center md:flex">
+          <div className="max-w-lg mt-10">
+            <h3 className="text-white text-xl font-bold sm:text-2xl ">
               Users List
             </h3>
             {/* <p className="text-white mt-2">

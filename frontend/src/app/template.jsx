@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect } from 'react';
 import { SnackbarProvider } from 'notistack';
-import Navbar from '@/components/navbar';
+// import Navbar from '@/components/navbar';
 
 const Template = ({ children }) => {
 
@@ -10,7 +10,7 @@ const Template = ({ children }) => {
 
     return (
         <SnackbarProvider anchorOrigin={{ vertical: 'top', horizontal: 'center' }} autoHideDuration={1000}>
-            <Navbar/>
+            {/* <Navbar/> */}
             {children}
         </SnackbarProvider>
     )

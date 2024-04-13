@@ -7,16 +7,17 @@ import React from "react";
 const about = () => {
   const router = useRouter();
 
-  const contactForm = useFormik({
+  const feedbackForm = useFormik({
     initialValues: {
       username: "",
       email: "",
       message: "",
     },
-    onSubmit: (values) => {
+    onSubmit: (values, {resetForm}) => {
       console.log(values);
+      resetForm()
 
-      fetch("http://localhost:5000/contact/add", {
+      fetch("http://localhost:5000/feedback/add", {
         method: "POST",
         body: JSON.stringify(values),
         headers: {
@@ -92,7 +93,7 @@ const about = () => {
               </div>
 
               <form
-                onSubmit={contactForm.handleSubmit}
+                onSubmit={feedbackForm.handleSubmit}
                 class="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2"
               >
                 <div>
@@ -105,13 +106,13 @@ const about = () => {
                   <input
                     type="text"
                     id="username"
-                    value={contactForm.values.username}
-                    onChange={contactForm.handleChange}
+                    value={feedbackForm.values.username}
+                    onChange={feedbackForm.handleChange}
                     class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
                   />
-                  {contactForm.touched.username && (
+                  {feedbackForm.touched.username && (
                     <span className="text-red">
-                      {contactForm.errors.username}
+                      {feedbackForm.errors.username}
                     </span>
                   )}
                 </div>
@@ -126,12 +127,12 @@ const about = () => {
                   <input
                     type="text"
                     id="email"
-                    value={contactForm.values.email}
-                    onChange={contactForm.handleChange}
+                    value={feedbackForm.values.email}
+                    onChange={feedbackForm.handleChange}
                     class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
                   />
-                  {contactForm.touched.email && (
-                    <span className="text-red">{contactForm.errors.email}</span>
+                  {feedbackForm.touched.email && (
+                    <span className="text-red">{feedbackForm.errors.email}</span>
                   )}
                 </div>
 
@@ -145,13 +146,13 @@ const about = () => {
                   <textarea
                     type="text"
                     id="message"
-                    value={contactForm.values.message}
-                    onChange={contactForm.handleChange}
+                    value={feedbackForm.values.message}
+                    onChange={feedbackForm.handleChange}
                     class="h-64 w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
                   >
-                    {contactForm.touched.message && (
+                    {feedbackForm.touched.message && (
                       <span className="text-red">
-                        {contactForm.errors.message}
+                        {feedbackForm.errors.message}
                       </span>
                     )}
                   </textarea>
