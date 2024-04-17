@@ -1,6 +1,6 @@
 import React from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
-// import regeneratorRuntime from  'regenerator-runtime';
+
 
 
 const Dictaphone = () => {

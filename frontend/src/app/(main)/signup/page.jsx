@@ -59,7 +59,7 @@ export default function Signup() {
       <main
         className="min-h-screen flex items-center"
         style={{
-          backgroundImage: `url('https://images.alphacoders.com/127/1275722.jpg')`,
+          // backgroundImage: `url('https://images.alphacoders.com/127/1275722.jpg')`,
           backgroundSize: "cover",
         }}
       >

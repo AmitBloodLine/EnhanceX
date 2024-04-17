@@ -1,14 +1,17 @@
 import React from 'react';
-import ImageRecognition from './components/ImageRecognition';
-import Dictaphone from './components/SpeechRecognition';
+import GestureRecognition from './components/GestureRecognition';
+
+// import ImageRecognition from './components/ImageRecognition';
+// import Dictaphone from './components/SpeechRecognition';
 
 const App = () => {
   return (
     <div>
       {/* <ImageRecognition/> */}
-      <Dictaphone/>
+      {/* <Dictaphone/> */}
+    <GestureRecognition/>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
