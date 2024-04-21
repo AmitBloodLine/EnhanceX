@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
-import ImageRecognition from './plugins/ImageRecognition.jsx';
-import GestureRecognition from './components/GestureRecognition.jsx';
+// import ImageRecognition from './plugins/ImageRecognition.jsx';
+// import GestureRecognition from './components/GestureRecognition.jsx';
 
 // import 'regenerator-runtime';
 
