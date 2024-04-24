@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import * as cocoSsd from "@tensorflow-models/coco-ssd";
 import "@tensorflow/tfjs";
 
-const ImageRecognition = () => {
+const ImageClassification = () => {
   const [predictions, setPredictions] = useState([]);
   const [loading, setLoading] = useState(false);
   const imageRef = useRef(null);
@@ -59,4 +59,4 @@ const ImageRecognition = () => {
   );
 };
 
-export default ImageRecognition;
+export default ImageClassification;
