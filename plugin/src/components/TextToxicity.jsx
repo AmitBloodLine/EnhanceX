@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import useTextToxicity from "react-text-toxicity";
 
-function Toxicity({ predictions }) {
+function TextToxicity({ predictions }) {
     const style = { margin: 10 };
 
     if (!predictions) return <div style={style}>Loading predictions...</div>;

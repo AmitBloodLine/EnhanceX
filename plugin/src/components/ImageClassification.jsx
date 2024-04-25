@@ -1,4 +1,4 @@
-// ImageRecognition.js
+// ImageClassification.jsx
 import React, { useRef, useState } from "react";
 import * as cocoSsd from "@tensorflow-models/coco-ssd";
 import "@tensorflow/tfjs";
