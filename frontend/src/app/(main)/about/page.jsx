@@ -43,7 +43,7 @@ const about = () => {
       </div>
       <footer className="">
         <div className="max-w-screen-xl mx-auto lg:p-8">
-          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-4" />
+          <hr className="border-gray-200 sm:mx-auto dark:border-gray-700"/>
           <div className="text-center">
             <a
               href="#"

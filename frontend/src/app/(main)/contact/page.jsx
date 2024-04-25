@@ -46,7 +46,7 @@ const Contact = () => {
     <div
     className="h-screen bg-opacity-25 bg-cover"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1480506132288-68f7705954bd?q=80&w=2120&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+          backgroundImage: `url(' ')`,
         }}>
       <div className="bg-dark py-10 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
@@ -172,7 +172,7 @@ const Contact = () => {
       </div>
       <footer className="bg-base-200">
         <div className="max-w-screen mx-auto lg:p-4">
-          <hr className="my-6 border-gray-200 dark:border-gray-700 lg:my-14" />
+          <hr className=" border-gray-200 dark:border-gray-700" />
           <div className="text-center">
             <a
               href="#"

@@ -58,7 +58,7 @@ const FeedBackForm = () => {
 
           <form
             onSubmit={FeedBackForm.handleSubmit}
-            class="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2"
+            class="mx-auto grid max-w-screen-md gap-4"
           >
             <div>
               <label
@@ -79,7 +79,7 @@ const FeedBackForm = () => {
               )}
             </div>
 
-            <div class="sm:col-span-2">
+            <div>
               <label
                 for="email"
                 class="mb-2 inline-block text-sm text-gray-800 sm:text-base"
@@ -110,7 +110,7 @@ const FeedBackForm = () => {
                 id="message"
                 value={FeedBackForm.values.message}
                 onChange={FeedBackForm.handleChange}
-                class="h-64 w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+                class="h-64 w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300"
               >
                 {FeedBackForm.touched.message && (
                   <span className="text-red">
