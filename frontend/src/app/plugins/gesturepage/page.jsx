@@ -1,7 +1,12 @@
 "use client";
 import React from "react";
+import { CopyBlock, dracula } from 'react-code-blocks';
 
-const page = () => {
+const GesturePage = () => {
+
+  const codeToCopy = `<div id="gesture-recognition-plugin"></div>
+<script src="main.js"></script>`
+
   return (
     <div>
       <div
@@ -24,15 +29,18 @@ const page = () => {
           </p>
         </div>
         <div className="col-span-8 p-10">
-          <div className="mockup-code p-10">
-            <pre data-prefix="$">
-              <code>npm i tailwind</code>
-            </pre>
-          </div>
+          <CopyBlock
+          
+            text={codeToCopy}
+            language={'html'}
+            showLineNumbers={true}
+            theme={dracula}
+            wrapLines
+          />
         </div>
       </div>
     </div>
   );
 };
 
-export default page;
+export default GesturePage;
