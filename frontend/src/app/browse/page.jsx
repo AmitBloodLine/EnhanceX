@@ -4,7 +4,7 @@ import React from "react";
 const page = () => {
   return (
     <div>
-      <div className="hero bg-base-200 h-96">
+      <div className="hero bg-white dark:bg-gray-900 h-96">
         <img
           src=""
           alt=""
@@ -21,7 +21,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="grid gap-y-14 grid-cols-1 md:grid-cols-3 bg-cover py-24 pl-48">
+      <div className="grid gap-y-14 grid-cols-1 md:grid-cols-3 bg-cover py-24 bg-gray-50 dark:bg-gray-800">
         <div className="card w-96 bg-gray-800 shadow-lg shadow-cyan-500/50">
           <figure>
             <img
@@ -149,7 +149,7 @@ const page = () => {
         <p className="">Some Content</p>
       </div>
 
-      <footer className="bg-base-200">
+      <footer className="bg-white dark:bg-gray-900">
         <div className="max-w-screen-xl mx-auto lg:p-8">
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-4" />
           <div className="text-center">
@@ -159,7 +159,7 @@ const page = () => {
             >
               <img
                 src="/AI-EnhanceX.png"
-                className="h-12 mr-3"
+                className="h-14 mr-3"
                 alt="AI EnhanceX Logo"
               />
             </a>

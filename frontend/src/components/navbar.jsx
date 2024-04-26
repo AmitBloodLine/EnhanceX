@@ -1,95 +1,108 @@
 import React from "react";
-import Link from "next/link";
+
 const Navbar = () => {
   return (
-    <header className=" w-full">
-          <nav className="border-gray-200 py-2.5 dark:bg-gray-900">
-            <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
-              <a href="#" className="flex items-center">
-                <img
-                  src="/AI-EnhanceX.png"
-                  className="h-14 mr-3 sm:h-14"
-                  alt="AI EnhanceX"
-                />
-              </a>
-              <div className="flex items-center lg:order-2">
-                <div className="hidden mt-2 mr-4 sm:inline-block">
-                  <a
-                    className="github-button"
-                    href="https://github.com/themesberg/landwind"
-                    data-size="large"
-                    data-icon="octicon-star"
-                    data-show-count="true"
-                    aria-label="Star themesberg/landwind on GitHub"
-                  >
-                  </a>
-                </div>
-                <Link
-                  href="/signup"
-                  className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
-                >
-                  Register
-                </Link>
-              </div>
-              <div
-                className="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
-                id="mobile-menu-2"
-              >
-                <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                  <li>
-                    <a
-                      href="/"
-                      className="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
-                      aria-current="page"
-                    >
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <Link
-                      href="/browse"
-                      className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                    >
-                      Browse Plugins
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/contact"
-                      className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                    >
-                      Contact
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/about"
-                      className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                    >
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/login"
-                      className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                    >
-                      Login
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/feedback"
-                      className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                    >
-                      Feedback
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </header>
+    <header class="flex flex-wrap sm:justify-start sm:flex-nowrap w-full text-sm py-4 bg-white dark:bg-gray-900">
+      <nav
+        class="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between"
+        aria-label="Global"
+      >
+        <a href="/" className="">
+          <img
+            src="/AI-EnhanceX.png"
+            className="h-14 mr-3 sm:h-14"
+            alt="AI EnhanceX"
+          />
+        </a>
+        <div class="sm:order-3 flex items-center gap-x-2">
+          <button
+            type="button"
+            class="sm:hidden hs-collapse-toggle p-2.5 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-neutral-700 dark:text-white dark:hover:bg-white/10"
+            data-hs-collapse="#navbar-alignment"
+            aria-controls="navbar-alignment"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              class="hs-collapse-open:hidden flex-shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" x2="21" y1="6" y2="6" />
+              <line x1="3" x2="21" y1="12" y2="12" />
+              <line x1="3" x2="21" y1="18" y2="18" />
+            </svg>
+            <svg
+              class="hs-collapse-open:block hidden flex-shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-blue-600 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-900 dark:border-neutral-700 dark:text-blue-500 dark:hover:bg-white-800"
+          >
+            Register
+          </button>
+        </div>
+        <div
+          id="navbar-alignment"
+          class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2"
+        >
+          <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5">
+            <a class="font-medium text-blue-500" href="/" aria-current="page">
+              Home
+            </a>
+            <a
+              class="font-medium text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500"
+              href="/browse"
+            >
+              Browse Plugin
+            </a>
+            <a
+              class="font-medium text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500"
+              href="/contact"
+            >
+              Contact
+            </a>
+            <a
+              class="font-medium text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500"
+              href="about"
+            >
+              About
+            </a>
+            <a
+              class="font-medium text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500"
+              href="/login"
+            >
+              Login
+            </a>
+            <a
+              class="font-medium text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500"
+              href="/feedback"
+            >
+              Feedback
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 };
 

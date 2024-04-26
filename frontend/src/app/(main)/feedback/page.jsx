@@ -3,6 +3,9 @@ import React from "react";
 import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
 import { enqueueSnackbar } from "notistack";
+import Rating from "@mui/material/Rating";
+import Stack from "@mui/material/Stack";
+
 const FeedBackForm = () => {
   const router = useRouter();
 
@@ -120,6 +123,12 @@ const FeedBackForm = () => {
               </textarea>
             </div>
 
+            <div className="bg-white py-6 flex justify-start">
+              <Stack spacing={1}>
+                <Rating name="size-large" defaultValue={0} size="large" />
+              </Stack>
+            </div>
+
             <div class="flex items-center justify-between sm:col-span-2">
               <button
                 type="submit"
@@ -132,7 +141,7 @@ const FeedBackForm = () => {
         </div>
       </div>
 
-      <div className="bg-white py-6 sm:py-8 lg:py-12">
+      <div className="bg-white py-6 sm:py-8">
         <div className="mx-auto max-w-screen-md px-4 md:px-8">
           <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl xl:mb-12">
             User's Review

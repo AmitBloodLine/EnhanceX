@@ -7,10 +7,14 @@ module.exports = {
 
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/preline/preline.js",
   ],
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui"),require('@tailwindcss/forms'),],
-  
-}
+  plugins: [
+    require("daisyui"),
+    require("@tailwindcss/forms"),
+    require("preline/plugin"),
+  ],
+};

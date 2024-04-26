@@ -1,64 +1,53 @@
-'use client'
+"use client";
 import React from "react";
 import Link from "next/link";
 
 const AdminNavbar = () => {
   return (
-    <div>
-      <header className=" w-full">
-        <nav className="border-gray-200 py-2.5 dark:bg-gray-900">
-          <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
-            <a href="#" className="flex items-center">
+    <div className="navbar bg-base-100">
+      <div className="flex-1">
+        <a className="btn btn-ghost text-xl">daisyUI</a>
+      </div>
+      <div className="flex-none gap-2">
+        <div className="form-control">
+          <input
+            type="text"
+            placeholder="Search"
+            className="input input-bordered w-24 md:w-auto"
+          />
+        </div>
+        <div className="dropdown dropdown-end">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost btn-circle avatar"
+          >
+            <div className="w-10 rounded-full">
               <img
-                src="/AI-EnhanceX.png"
-                className="h-14 mr-3 sm:h-14"
-                alt="AI EnhanceX"
+                alt="Tailwind CSS Navbar component"
+                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
               />
-            </a>
-
-            <div
-              className="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
-              id="mobile-menu-2"
-            >
-              <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                <li>
-                  <a
-                    href="/admin/addplugin"
-                    className="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
-                    aria-current="page"
-                  >
-                    Add Plugin
-                  </a>
-                </li>
-                <li>
-                  <Link
-                    href="/admin/manageuser"
-                    className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >
-                    Manage User
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/admin/profile"
-                    className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >
-                    Profile
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/admin/dashboard"
-                    className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >
-                    Dashboard
-                  </Link>
-                </li>
-              </ul>
             </div>
           </div>
-        </nav>
-      </header>
+          <ul
+            tabIndex={0}
+            className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <a className="justify-between">
+                Profile
+                <span className="badge">New</span>
+              </a>
+            </li>
+            <li>
+              <a>Settings</a>
+            </li>
+            <li>
+              <a>Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
