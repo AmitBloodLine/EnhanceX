@@ -48,7 +48,7 @@ const Contact = () => {
         style={{
           backgroundImage: `url(' ')`,
         }}>
-      <div className="bg-dark py-10 sm:py-8 lg:py-12">
+      <div className="py-10 sm:py-8 lg:py-12 bg-gray-50 dark:bg-gray-800">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           {/* text - start */}
           <div className="mb-10 md:mb-16">
@@ -170,7 +170,7 @@ const Contact = () => {
           {/* form - end */}
         </div>
       </div>
-      <footer className="bg-base-200">
+      <footer className="bg-white dark:bg-gray-900">
         <div className="max-w-screen mx-auto lg:p-4">
           <hr className=" border-gray-200 dark:border-gray-700" />
           <div className="text-center">
