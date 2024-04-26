@@ -21,7 +21,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="grid gap-y-14 grid-cols-1 md:grid-cols-3 bg-cover py-24 pl-48">
+      <div className="grid gap-y-14 grid-cols-1 md:grid-cols-3 bg-cover py-24">
         <div className="card w-96 bg-gray-800 shadow-lg shadow-cyan-500/50">
           <figure>
             <img
@@ -159,7 +159,7 @@ const page = () => {
             >
               <img
                 src="/AI-EnhanceX.png"
-                className="h-12 mr-3"
+                className="h-14 mr-3"
                 alt="AI EnhanceX Logo"
               />
             </a>
