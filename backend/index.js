@@ -6,7 +6,6 @@ const app = express();
 const userRouter = require("./routers/userRouter");
 const ContactRouter = require("./routers/contactRouter")
 const FeedbackRouter = require("./routers/feedbackRouter")
-const PluginRouter = require("./routers/pluginRouter")
 const UtilRouter = require("./routers/util")
 
 
@@ -20,7 +19,6 @@ app.use(express.json());
 app.use("/user", userRouter);
 app.use("/contact", ContactRouter);
 app.use("/feedback", FeedbackRouter);
-app.use("/plugin", PluginRouter);
 app.use("/util", UtilRouter);
 
 
