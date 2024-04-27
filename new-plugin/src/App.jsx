@@ -1,13 +1,15 @@
 import React from 'react'
 import SpeechRecognitionPlugin from './components/SpeechRecognition';
 import GestureRecognition from './components/GestureRecognition';
+import TextToxicity from './components/TextToxicity';
 
 const App = () => {
   return (
     <div>
       {/* <SpeechRecognitionPlugin /> */}
       {/* <GestureRecognition /> */}
-    </div>
+      <TextToxicity/>
+    </div> 
   )
 }
 
