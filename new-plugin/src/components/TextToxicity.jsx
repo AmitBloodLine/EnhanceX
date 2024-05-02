@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import useTextToxicity from "react-text-toxicity";
 
-const predictions = useTextToxicity('text', { threshold, delay });
+// const predictions = useTextToxicity('text', { threshold, delay });
 
 function TextToxicity({ predictions }) {
     const style = { margin: 10 };
@@ -19,7 +19,7 @@ function TextToxicity({ predictions }) {
     );
 }
 
-export default function Index() {
+export default function TextToxicityPlugin() {
     const [value, setValue] = useState("");
     const predictions = useTextToxicity(value);
 
@@ -33,7 +33,7 @@ export default function Index() {
                     onChange={(e) => setValue(e.target.value)}
                 />
             </div>
-            {value && <Toxicity predictions={predictions} />}
+            {value && <TextToxicity predictions={predictions} />}
         </div>
     );
 }
