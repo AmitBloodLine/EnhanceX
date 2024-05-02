@@ -1,8 +1,7 @@
 import React from 'react'
 import SpeechRecognitionPlugin from './components/SpeechRecognition';
 import GestureRecognition from './components/GestureRecognition';
-import TextToxicityPlugin from './components/TextToxicity';
-import ImageClassification from './components/ImageClassification';
+import ModeratorPlugin from './components/ToxicityClassification';
 // import TextToxicity from './components/TextToxicity';
 
 const App = () => {
@@ -10,8 +9,7 @@ const App = () => {
     <div>
       {/* <SpeechRecognitionPlugin /> */}
       {/* <GestureRecognition /> */}
-      {/* <TextToxicityPlugin/> */}
-      {/* <ImageClassification /> */}
+      <ModeratorPlugin/>
     </div> 
   )
 }
