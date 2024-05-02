@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import * as toxicity from '@tensorflow-models/toxicity';
+// import * as toxicity from '@tensorflow-models/toxicity';
 
 
-const ModeratorPlugin = () => {
+const ToxicityPlugin = () => {
 
   const [model, setModel] = useState(null);
   const [text, setText] = useState('');
@@ -10,7 +10,7 @@ const ModeratorPlugin = () => {
 
   useEffect(() => {
     async function loadModel() {
-      const model = await toxicity.load();
+      const model = await window.toxicity.load();
       console.log('model loaded');
       setModel(model);
     }
@@ -40,4 +40,4 @@ const ModeratorPlugin = () => {
   )
 }
 
-export default ModeratorPlugin
+export default ToxicityPlugin

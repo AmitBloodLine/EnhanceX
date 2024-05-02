@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import * as toxicity from '@tensorflow-models/toxicity';
+// import * as toxicity from '@tensorflow-models/toxicity';
 
 
 const ModeratorPlugin = () => {
