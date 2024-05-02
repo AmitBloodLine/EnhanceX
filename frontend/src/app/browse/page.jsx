@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 
 const page = () => {
@@ -21,7 +22,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="grid gap-y-14 grid-cols-1 md:grid-cols-3 bg-cover py-24 bg-gray-50 dark:bg-gray-800">
+      <div className="grid gap-y-14 grid-cols-1 md:grid-cols-3 bg-cover py-24 bg-gray-50 dark:bg-gray-800 place-items-center">
         <div className="card w-96 bg-gray-800 shadow-lg shadow-cyan-500/50">
           <figure>
             <img
@@ -36,12 +37,12 @@ const page = () => {
               and locating objects within images or video frames.
             </p>
             <div className="card-actions justify-end">
-              <a
+              <Link
                 href="/plugins/objectpage"
                 className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
               >
                 Plugin Details
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -61,12 +62,12 @@ const page = () => {
               interpretation of human gestures.
             </p>
             <div className="card-actions justify-end">
-              <a
+              <Link
                 href="/plugins/gesturepage"
                 className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
               >
                 Plugin Details
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -86,12 +87,12 @@ const page = () => {
               recognizing harmful or offensive language.
             </p>
             <div className="card-actions justify-end">
-              <a
+              <Link
                 href="/plugins/texttoxicitypage"
                 className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
               >
                 Plugin Details
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -111,12 +112,12 @@ const page = () => {
               photographs based on their content.
             </p>
             <div className="card-actions justify-end">
-              <a
+              <Link
                 href="/plugins/imagepage"
                 className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
               >
                 Plugin Details
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -137,12 +138,12 @@ const page = () => {
               into readable text.
             </p>
             <div className="card-actions justify-end">
-              <a
+              <Link
                 href="/plugins/speechpage"
                 className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
               >
                 Plugin Details
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -153,7 +154,7 @@ const page = () => {
         <div className="max-w-screen-xl mx-auto lg:p-8">
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-4" />
           <div className="text-center">
-            <a
+            <Link
               href="#"
               className="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white"
             >
@@ -162,13 +163,13 @@ const page = () => {
                 className="h-14 mr-3"
                 alt="AI EnhanceX Logo"
               />
-            </a>
+            </Link>
             <span className="block text-sm text-center text-gray-500 dark:text-gray-400">
               © 2024 AI EnhanceX™. All Rights Reserved.
             </span>
             <ul className="flex justify-center mt-5 space-x-5">
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
                 >
@@ -184,10 +185,10 @@ const page = () => {
                       clipRule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
                 >
@@ -203,10 +204,10 @@ const page = () => {
                       clipRule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
                 >
@@ -222,7 +223,7 @@ const page = () => {
                       clipRule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
