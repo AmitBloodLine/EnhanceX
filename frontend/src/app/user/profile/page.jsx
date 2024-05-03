@@ -1,113 +1,57 @@
-import React from 'react'
+"use client";
+import React from 'react';
 
-const UserProfile = () => {
+const userProfile = () => {
   return (
     <div>
-      <section className="section about-section gray-bg" id="about">
-        <div className="container">
-          <div className="row align-items-center flex-row-reverse">
-            <div className="col-lg-6">
-              <div className="about-text go-to">
-                <h3 className="dark-color">About Me</h3>
-                <h6 className="theme-color lead">
-                  A Lead UX &amp; UI designer based in Canada
-                </h6>
-                <p>
-                  I <mark>design and develop</mark> services for customers of all
-                  sizes, specializing in creating stylish, modern websites, web
-                  services and online stores. My passion is to design digital user
-                  experiences through the bold interface and meaningful interactions.
-                </p>
-                <div className="row about-list">
-                  <div className="col-md-6">
-                    <div className="media">
-                      <label>Birthday</label>
-                      <p>4th april 1998</p>
-                    </div>
-                    <div className="media">
-                      <label>Age</label>
-                      <p>22 Yr</p>
-                    </div>
-                    <div className="media">
-                      <label>Residence</label>
-                      <p>Canada</p>
-                    </div>
-                    <div className="media">
-                      <label>Address</label>
-                      <p>California, USA</p>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="media">
-                      <label>E-mail</label>
-                      <p>info@domain.com</p>
-                    </div>
-                    <div className="media">
-                      <label>Phone</label>
-                      <p>820-885-3321</p>
-                    </div>
-                    <div className="media">
-                      <label>Skype</label>
-                      <p>skype.0404</p>
-                    </div>
-                    <div className="media">
-                      <label>Freelance</label>
-                      <p>Available</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="about-avatar">
-                <img
-                  src="https://bootdey.com/img/Content/avatar/avatar7.png"
-                  title=""
-                  alt=""
-                />
-              </div>
-            </div>
+        <div className="bg-black max-w-2xl shadow overflow-hidden sm:rounded-lg mx-auto my-20">
+          <div className="px-4 py-5 sm:px-6">
+            <h3 className="text-lg leading-6 font-medium text-white-900">
+              User database
+            </h3>
+            <p className="mt-1 max-w-2xl text-sm text-gray-500">
+              Details and informations about user.
+            </p>
           </div>
-          <div className="counter">
-            <div className="row">
-              <div className="col-6 col-lg-3">
-                <div className="count-data text-center">
-                  <h6 className="count h2" data-to={500} data-speed={500}>
-                    500
-                  </h6>
-                  <p className="m-0px font-w-600">Happy Clients</p>
-                </div>
+          <div className="border-t border-gray-200">
+            <dl>
+              <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt className="text-sm font-medium text-gray-500">Full name</dt>
+                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  Mickael Poulaz
+                </dd>
               </div>
-              <div className="col-6 col-lg-3">
-                <div className="count-data text-center">
-                  <h6 className="count h2" data-to={150} data-speed={150}>
-                    150
-                  </h6>
-                  <p className="m-0px font-w-600">Project Completed</p>
-                </div>
+              <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt className="text-sm font-medium text-gray-500">plugin used</dt>
+                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  Gesture recognition
+                </dd>
               </div>
-              <div className="col-6 col-lg-3">
-                <div className="count-data text-center">
-                  <h6 className="count h2" data-to={850} data-speed={850}>
-                    850
-                  </h6>
-                  <p className="m-0px font-w-600">Photo Capture</p>
-                </div>
+              <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt className="text-sm font-medium text-gray-500">Email address</dt>
+                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  m.poul@example.com
+                </dd>
               </div>
-              <div className="col-6 col-lg-3">
-                <div className="count-data text-center">
-                  <h6 className="count h2" data-to={190} data-speed={190}>
-                    190
-                  </h6>
-                  <p className="m-0px font-w-600">Telephonic Talk</p>
-                </div>
+              <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt className="text-sm font-medium text-gray-500">contact No</dt>
+                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  9874563210
+                </dd>
               </div>
-            </div>
+              <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt className="text-sm font-medium text-gray-500">About</dt>
+                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  To get social media testimonials like these, keep your customers
+                  engaged with your social media accounts by posting regularly
+                  yourself
+                </dd>
+              </div>
+            </dl>
           </div>
         </div>
-      </section>
     </div>
   )
 }
 
-export default UserProfile;
+export default userProfile;

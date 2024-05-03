@@ -1,12 +1,15 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
 import { enqueueSnackbar } from "notistack";
-import Rating from "@mui/material/Rating";
-import Stack from "@mui/material/Stack";
+import ReactStars from "react-rating-stars-component";
+
 
 const FeedBackForm = () => {
+
+  const [rating, setRating] = useState(0);
+
   const router = useRouter();
 
   const FeedBackForm = useFormik({
@@ -14,8 +17,10 @@ const FeedBackForm = () => {
       username: "",
       email: "",
       message: "",
+      rating: "",
     },
     onSubmit: (values, { resetForm }) => {
+      values.rating=rating;
       console.log(values);
       resetForm();
 
@@ -44,6 +49,7 @@ const FeedBackForm = () => {
     },
   });
   return (
+
     <div>
       <div class="bg-white py-6 sm:py-8 lg:py-12">
         <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
@@ -51,7 +57,6 @@ const FeedBackForm = () => {
             <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
               Give Us Your Feedback
             </h2>
-
             <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
               This is a section of some simple filler text, also known as
               placeholder text. It shares some characteristics of a real written
@@ -124,9 +129,12 @@ const FeedBackForm = () => {
             </div>
 
             <div className="bg-white py-6 flex justify-start">
-              <Stack spacing={1}>
-                <Rating name="size-large" defaultValue={0} size="large" />
-              </Stack>
+              <ReactStars
+                rating={rating}
+                onChange={setRating}
+                size={48}
+                activeColor="#ffd700"
+              />
             </div>
 
             <div class="flex items-center justify-between sm:col-span-2">
