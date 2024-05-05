@@ -2,14 +2,15 @@ import React from 'react'
 import SpeechRecognitionPlugin from './components/SpeechRecognition';
 import GestureRecognition from './components/GestureRecognition';
 import ModeratorPlugin from './components/ToxicityClassification';
-// import TextToxicity from './components/TextToxicity';
+import ImageClassification from './components/ImageClassification';
 
 const App = () => {
   return (
     <div>
       {/* <SpeechRecognitionPlugin /> */}
       {/* <GestureRecognition /> */}
-      <ModeratorPlugin/>
+      {/* <ModeratorPlugin/> */}
+      <ImageClassification/>
     </div> 
   )
 }

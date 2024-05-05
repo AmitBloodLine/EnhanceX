@@ -4,11 +4,8 @@ import React from "react";
 const Navbar = () => {
   return (
     <header class="flex flex-wrap sm:justify-start sm:flex-nowrap w-full text-sm py-4 bg-white dark:bg-gray-900">
-      <nav
-        class="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between"
-        aria-label="Global"
-      >
-        <Link href="/" className="">
+      <nav class="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between">
+        <Link href="/">
           <img
             src="/AI-EnhanceX.png"
             className="h-14 mr-3 sm:h-14"
@@ -55,7 +52,7 @@ const Navbar = () => {
               <path d="m6 6 12 12" />
             </svg>
           </button>
-          
+
           <Link
             type="button"
             class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-blue-600 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-900 dark:border-neutral-700 dark:text-blue-500 dark:hover:bg-white-800"
@@ -69,7 +66,11 @@ const Navbar = () => {
           class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2"
         >
           <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5">
-            <Link class="font-medium text-blue-500" href="/" aria-current="page">
+            <Link
+              class="font-medium text-blue-500"
+              href="/"
+              aria-current="page"
+            >
               Home
             </Link>
             <Link
@@ -92,7 +93,7 @@ const Navbar = () => {
             </Link>
             <Link
               class="font-medium text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500"
-              href="/contact"
+              href="/login"
             >
               Login
             </Link>

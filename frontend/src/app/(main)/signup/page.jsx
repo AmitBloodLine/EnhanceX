@@ -56,17 +56,11 @@ export default function Signup() {
 
   return (
     <>
-      <main
-        className="min-h-screen flex items-center"
-        style={{
-          // backgroundImage: `url('https://images.alphacoders.com/127/1275722.jpg')`,
-          backgroundSize: "cover",
-        }}
-      >
+      <main>
         <div className="container mx-auto px-20">
-          <div className="flex content-start items-center justify-center h-full">
-            <div className="w-full lg:w-4/12 px-4">
-              <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 border-0">
+          <div className="flex justify-center">
+            <div className="w-full lg:w-4/12 px-4 pt-40">
+              <div className="w-full shadow-lg rounded-lg bg-gray-300">
                 <div className="rounded-t mb-0 px-6 py-6">
                   <div className="text-center mb-3">
                     <h6 className="text-gray-600 text-sm font-bold">
@@ -198,13 +192,6 @@ export default function Signup() {
                   </form>
                 </div>
               </div>
-            </div>
-            <div>
-              <img
-                className="w-full h-[450px]"
-                src="/assets/sign-up.svg"
-                alt="home image"
-              />
             </div>
           </div>
         </div>

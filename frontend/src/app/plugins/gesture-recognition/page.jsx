@@ -42,15 +42,12 @@ const gestureRecognition = () => {
 
       <div class="grid grid-cols-2 gap-2">
         <div>
-          <h3 className="text-6xl p-10 font-medium text-white">
+          <h3 className="text-6xl font-medium text-white">
             Gesture Recognition
           </h3>
-          <p className="text-xl p-10 font-normal text-white">
+          <p className="text-xl font-normal text-white">
             Gesture recognition is a technology that enables computers or
-            machines to interpret human gestures as commands or input. It
-            involves capturing, analyzing, and understanding gestures made by
-            humans using cameras, sensors, or other input devices. These
-            gestures can include movements of the hands, body, face.
+            machines to interpret human gestures as commands or input.
           </p>
         </div>
 

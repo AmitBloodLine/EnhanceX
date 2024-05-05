@@ -49,30 +49,17 @@ export default function Login() {
 
   return (
     <>
-      <main
-        className="min-h-screen flex items-center bg-opacity-50"
-        style={{
-          backgroundImage: `url('')`,
-        }}
-      >
+      <main>
         <div className="container mx-auto px-4">
-          <div className="flex">
-            <div>
-              <img
-                className="w-full h-[570px]"
-                src="/assets/login-screen.svg"
-                alt="home image"
-              />
-            </div>
-            <div className="w-full lg:w-4/12 px-10 pt-28">
-              <div className=" flex flex-col min-w-0 break-words w-full mb-6 shadow-md shadow-yellow-400 rounded-lg bg-gray-300 border-0">
-                <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
+          <div className="flex justify-center">
+            <div className="w-full lg:w-4/12 px-10 pt-52">
+              <div className="w-full shadow-md shadow-yellow-400 rounded-lg bg-gray-300">
+                <div className="flex-auto px-4 lg:px-10 py-10">
                   {/*add grid*/}
                   <form onSubmit={loginForm.handleSubmit}>
                     <div className=" w-full mb-3 pt-10">
                       <label
                         className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                        htmlFor="grid-password"
                       >
                         Email
                       </label>
@@ -94,7 +81,6 @@ export default function Login() {
                     <div className="relative w-full mb-3">
                       <label
                         className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                        htmlFor="grid-password"
                       >
                         Password
                       </label>
@@ -141,7 +127,7 @@ export default function Login() {
                       Create new account
                     </Link>
                     <br></br>
-                    <Link className="text-blue-700" href="resetPassword">
+                    <Link className="text-blue-700" href="/resetPassword">
                       Forgot Password?
                     </Link>
                   </form>
