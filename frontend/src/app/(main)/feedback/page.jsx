@@ -38,7 +38,6 @@ const FeedBackForm = () => {
             enqueueSnackbar("Feedback Added successfully", {
               variant: "success",
             });
-            router.push("/");
           } else {
             enqueueSnackbar("Something went wrong", { variant: "error" });
           }
@@ -285,7 +284,6 @@ const FeedBackForm = () => {
                 )
               })
             }
-
           </div>
         </div>
       </div>
