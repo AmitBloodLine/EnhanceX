@@ -1,10 +1,12 @@
 "use client";
+import Navbar from "@/components/navbar";
 import Link from "next/link";
 import React from "react";
 
 const page = () => {
   return (
     <div>
+      <Navbar/>
       <div className="hero bg-white dark:bg-gray-900 h-96">
         <img
           src=""

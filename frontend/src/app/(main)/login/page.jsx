@@ -4,9 +4,14 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { enqueueSnackbar } from "notistack";
 import { useRouter } from "next/navigation";
+
+import useUserContext from "@/context/UserContext";
 import Link from "next/link";
 
 export default function Login() {
+
+  const { setLoggedIn } = useUserContext();
+
   const router = useRouter();
   const loginValidationSchema = Yup.object().shape({
     email: Yup.string().required("Email is required").email("Email is Invalid"),
@@ -33,7 +38,13 @@ export default function Login() {
             enqueueSnackbar("User Login successfully", {
               variant: "success",
             });
-            router.push("/");
+            response.json().then((data) => {
+              console.log(data);
+              sessionStorage.setItem("user", JSON.stringify(data));
+              router.push("/browse");
+            });
+
+
           } else {
             enqueueSnackbar("Something went wrong", { variant: "error" });
           }
@@ -141,7 +152,7 @@ export default function Login() {
                       Create new account
                     </Link>
                     <br></br>
-                    <Link className="text-blue-700" href="resetPassword">
+                    <Link className="text-blue-700" href="/resetPassword">
                       Forgot Password?
                     </Link>
                   </form>
