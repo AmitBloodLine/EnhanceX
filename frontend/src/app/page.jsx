@@ -1,8 +1,11 @@
 "use client";
+import Navbar from "@/components/navbar";
 import React from "react";
 const Home = () => {
   return (
+    
     <>
+    <Navbar/>
       <>
         {/* Favicon */}
         <link

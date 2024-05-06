@@ -1,10 +1,12 @@
 "use client";
+import Navbar from "@/components/navbar";
 import Link from "next/link";
 import React from "react";
 
 const page = () => {
   return (
     <div>
+      <Navbar/>
       <div className="hero bg-white dark:bg-gray-900 h-96">
         <img
           src=""
@@ -26,19 +28,19 @@ const page = () => {
         <div className="card w-96 bg-gray-800 shadow-lg shadow-cyan-500/50">
           <figure>
             <img
-              src="https://www.datasciencecentral.com/wp-content/uploads/2021/10/9712908078.jpeg"
+            className="bg-auto"
+              src="https://nordicapis.com/wp-content/uploads/7-Most-Useful-Face-Recognition-APIs.png"
               alt="card"
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title text-white">Object Detection</h2>
+            <h2 className="card-title text-white">Face Detection</h2>
             <p className="text-white py-4">
-              Object detection is a computer vision task focused on identifying
-              and locating objects within images or video frames.
+              Face Detection is a computer vision task that involves automatically identifying and locating human faces within digital images or videos.
             </p>
             <div className="card-actions justify-end">
               <Link
-                href="/plugins/objectpage"
+                href="/plugins/face-detection"
                 className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
               >
                 Plugin Details
@@ -50,6 +52,7 @@ const page = () => {
         <div className="card w-96 bg-gray-800 shadow-lg shadow-cyan-500/50">
           <figure>
             <img
+            className="bg-auto"
               src="https://d17ocfn2f5o4rl.cloudfront.net/wp-content/uploads/2020/08/Hand-Tracking-and-Gesture-Recognition-Using-AI_-Applications-and-Challenges.jpg"
               alt="card"
             />
@@ -63,7 +66,7 @@ const page = () => {
             </p>
             <div className="card-actions justify-end">
               <Link
-                href="/plugins/gesturepage"
+                href="/plugins/gesture-recognition"
                 className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
               >
                 Plugin Details
@@ -88,7 +91,7 @@ const page = () => {
             </p>
             <div className="card-actions justify-end">
               <Link
-                href="/plugins/texttoxicitypage"
+                href="/plugins/text-toxicity-detection"
                 className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
               >
                 Plugin Details
@@ -113,7 +116,7 @@ const page = () => {
             </p>
             <div className="card-actions justify-end">
               <Link
-                href="/plugins/imagepage"
+                href="/plugins/image-classification"
                 className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
               >
                 Plugin Details
@@ -139,7 +142,7 @@ const page = () => {
             </p>
             <div className="card-actions justify-end">
               <Link
-                href="/plugins/speechpage"
+                href="/plugins/speech-recognition"
                 className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
               >
                 Plugin Details

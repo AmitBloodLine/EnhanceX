@@ -4,9 +4,14 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { enqueueSnackbar } from "notistack";
 import { useRouter } from "next/navigation";
+
+import useUserContext from "@/context/UserContext";
 import Link from "next/link";
 
 export default function Login() {
+
+  const { setLoggedIn } = useUserContext();
+
   const router = useRouter();
   const loginValidationSchema = Yup.object().shape({
     email: Yup.string().required("Email is required").email("Email is Invalid"),
@@ -33,7 +38,13 @@ export default function Login() {
             enqueueSnackbar("User Login successfully", {
               variant: "success",
             });
-            router.push("/");
+            response.json().then((data) => {
+              console.log(data);
+              sessionStorage.setItem("user", JSON.stringify(data));
+              router.push("/browse");
+            });
+
+
           } else {
             enqueueSnackbar("Something went wrong", { variant: "error" });
           }
@@ -49,23 +60,11 @@ export default function Login() {
 
   return (
     <>
-      <main
-        className="min-h-screen flex items-center bg-opacity-50"
-        style={{
-          backgroundImage: `url('')`,
-        }}
-      >
+      <main>
         <div className="container mx-auto px-4">
-          <div className="flex">
-            <div>
-              <img
-                className="w-full h-[570px]"
-                src="/assets/login-screen.svg"
-                alt="home image"
-              />
-            </div>
-            <div className="w-full lg:w-4/12 px-10 pt-28">
-              <div className=" flex flex-col min-w-0 break-words w-full mb-6 shadow-md shadow-yellow-400 rounded-lg bg-gray-300 border-0">
+          <div className="flex justify-center">
+            <div className="w-full lg:w-4/12 mx-8 my-20">
+              <div className="w-full mb-6 shadow-md shadow-yellow-400 rounded-lg bg-gray-300 border-0">
                 <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                   {/*add grid*/}
                   <form onSubmit={loginForm.handleSubmit}>
@@ -141,7 +140,7 @@ export default function Login() {
                       Create new account
                     </Link>
                     <br></br>
-                    <Link className="text-blue-700" href="resetPassword">
+                    <Link className="text-blue-700" href="/resetPassword">
                       Forgot Password?
                     </Link>
                   </form>
