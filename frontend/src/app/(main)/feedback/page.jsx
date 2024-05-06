@@ -230,7 +230,7 @@ const FeedBackForm = () => {
                     <div>
                       <span className="block text-sm font-bold">{feed.username}</span>
                       <span className="block text-sm text-gray-500">
-                       {feed.createdAt}
+                        {feed.createdAt}
                       </span>
                     </div>
 
@@ -279,14 +279,12 @@ const FeedBackForm = () => {
                     </div>
 
                     <p className="text-gray-600">
-                     {feed.message}
+                      {feed.message}
                     </p>
                   </div>
                 )
               })
             }
-
-
 
           </div>
         </div>
