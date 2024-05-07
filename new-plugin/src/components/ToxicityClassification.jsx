@@ -2,13 +2,19 @@ import React, { useEffect, useState } from 'react'
 // import * as toxicity from '@tensorflow-models/toxicity';
 
 
-const ToxicityPlugin = () => {
+const ToxicityPlugin = ({
+  inputElement,
+  buttonElement,
+  outputElement,
+  children
+}) => {
 
   const [model, setModel] = useState(null);
-  const [text, setText] = useState('');
+  // const [text, setText] = useState('');
   const [predictions, setPredictions] = useState(null)
 
   useEffect(() => {
+    buttonElement.onclick = predict;
     async function loadModel() {
       const model = await window.toxicity.load();
       console.log('model loaded');
@@ -18,16 +24,21 @@ const ToxicityPlugin = () => {
   }, []);
 
   async function predict() {
-    const predictions = await model.classify(text);
+    console.log('predicting');
+    const predictions = await model.classify(inputElement.value);
     console.log(predictions);
     setPredictions(predictions);
+    if (predictions[6].results[0].match) {
+      outputElement.innerHTML = "Toxicity detected";
+    }
   }
+
 
   return (
     <div>
-      <div className='card'>
+      {children}
+      {/* <div className='card'>
         <div className="card-body">
-          <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
           <button onClick={() => predict()}>Predict</button>
           <div>
             {predictions !== null && predictions.map((prediction) => (
@@ -35,7 +46,7 @@ const ToxicityPlugin = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

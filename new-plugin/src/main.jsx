@@ -11,12 +11,24 @@ import ToxicityPlugin from "./components/ToxicityClassification.jsx";
 //   </React.StrictMode>,
 // )
 
-
 const toxicityElement = document.getElementById('toxicity-plugin');
 
 if (toxicityElement) {
+
+  let inputElement = document.createElement('text-input');
+  let buttonElement = document.createElement('trigger');
+  let outputElement = document.createElement('output');
+
+  let innerHTML = {__html: toxicityElement.innerHTML};
+
   ReactDOM.createRoot(toxicityElement).render(
-    <ToxicityPlugin />,
+    <ToxicityPlugin
+      inputElement={inputElement}
+      buttonElement={buttonElement}
+      outputElement={outputElement}
+    >
+      <div dangerouslySetInnerHTML={innerHTML} />
+    </ToxicityPlugin>,
     toxicityElement
   );
 }
