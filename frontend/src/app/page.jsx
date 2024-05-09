@@ -1,14 +1,16 @@
 "use client";
+import Navbar from "@/components/navbar";
 import React from "react";
 const Home = () => {
   return (
     <>
+    <Navbar/>
       <>
         {/* Favicon */}
         <link
-          rel="apple-touch-icon"
+          rel="icon"
           sizes="180x180"
-          href="/apple-touch-icon.png"
+          href="#"
         />
 
         <section className="bg-white dark:bg-gray-900">
