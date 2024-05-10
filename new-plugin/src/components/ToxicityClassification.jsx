@@ -3,20 +3,22 @@ import React, { useEffect, useState } from 'react'
 
 
 const ToxicityPlugin = ({
-  inputElement,
-  buttonElement,
-  outputElement,
   children
 }) => {
 
   const [model, setModel] = useState(null);
   // const [text, setText] = useState('');
   const [predictions, setPredictions] = useState(null)
-
+  let inputElement = document.getElementById('text-input');
+  let outputElement = document.getElementById('output');
+  
   useEffect(() => {
-    buttonElement.onclick = predict;
+    let buttonElement = document.getElementById('trigger');
+    buttonElement.disabled = true;
+    buttonElement.addEventListener('click', () => predict());
     async function loadModel() {
       const model = await window.toxicity.load();
+      buttonElement.disabled = false;
       console.log('model loaded');
       setModel(model);
     }
@@ -24,7 +26,7 @@ const ToxicityPlugin = ({
   }, []);
 
   async function predict() {
-    console.log('predicting');
+    console.log('predicting...');
     const predictions = await model.classify(inputElement.value);
     console.log(predictions);
     setPredictions(predictions);

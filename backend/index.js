@@ -25,6 +25,7 @@ app.use("/util", UtilRouter);
 const port = 5000;
 
 app.use(express.static("./static/uploads"));
+app.use(express.static("./static/resources"));
 
 app.listen(port, () => {
   console.log("express server open");

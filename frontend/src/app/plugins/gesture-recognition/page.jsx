@@ -62,6 +62,7 @@ const gestureRecognition = () => {
             showLineNumbers={true}
             wrapLongLines={true}
           />
+
         </div>
       </div>
 

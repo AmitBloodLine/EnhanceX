@@ -15,11 +15,11 @@ const toxicityElement = document.getElementById('toxicity-plugin');
 
 if (toxicityElement) {
 
-  let inputElement = document.createElement('text-input');
-  let buttonElement = document.createElement('trigger');
-  let outputElement = document.createElement('output');
+  let inputElement = document.getElementById('text-input');
+  let buttonElement = document.getElementById('trigger');
+  let outputElement = document.getElementById('output');
 
-  let innerHTML = {__html: toxicityElement.innerHTML};
+  let innerHTML = { __html: toxicityElement.innerHTML };
 
   ReactDOM.createRoot(toxicityElement).render(
     <ToxicityPlugin
@@ -28,7 +28,6 @@ if (toxicityElement) {
       outputElement={outputElement}
     >
       <div dangerouslySetInnerHTML={innerHTML} />
-    </ToxicityPlugin>,
-    toxicityElement
+    </ToxicityPlugin>
   );
 }
