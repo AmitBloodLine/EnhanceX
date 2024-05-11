@@ -34,7 +34,7 @@ const page = () => {
                   alt="card"
                 />
               </figure>
-              <div className="card-body">
+              <div className="card-body h-72">
                 <h2 className="card-title text-white">Face Detection</h2>
                 <p className="text-white py-4">
                   Face Detection is a computer vision task that involves automatically identifying and locating human faces within digital images or videos.
@@ -59,11 +59,10 @@ const page = () => {
                   alt="card"
                 />
               </figure>
-              <div className="card-body">
+              <div className="card-body h-72">
                 <h2 className="card-title text-white">Gesture Recognition</h2>
                 <p className="text-white py-4">
-                  Gesture recognition is a specialized field within computer vision
-                  and machine learning. It revolves around the identification and
+                  Gesture recognition revolves around the identification and
                   interpretation of human gestures.
                 </p>
                 <div className="card-actions justify-end">
@@ -86,7 +85,7 @@ const page = () => {
                   alt="card"
                 />
               </figure>
-              <div className="card-body">
+              <div className="card-body h-72">
                 <h2 className="card-title text-white">Text Toxicity</h2>
                 <p className="text-white py-4">
                   The system or component in question is crafted to handle models
@@ -112,12 +111,11 @@ const page = () => {
                 alt="card"
               />
             </figure>
-            <div className="card-body">
+            <div className="card-body h-72">
               <h2 className="card-title text-white">Image Classification</h2>
               <p className="text-white py-4">
                 An image classification module is designed to recognize different
-                types or classes of images. Its primary function involves labeling
-                photographs based on their content.
+                types or classes of images.
               </p>
               <div className="card-actions justify-end">
                 <Link
@@ -139,13 +137,12 @@ const page = () => {
                   alt="card"
                 />
               </figure>
-              <div className="card-body">
+              <div className="card-body h-72">
                 <h2 className="card-title text-white">Speech Recognition</h2>
                 <p className="text-white py-4">
-                  The model converts spoken words into text, facilitating functions
-                  such as virtual assistants and live captioning.t operates as a
+                  The model converts spoken words into text, it operates as a
                   program capable of recognizing spoken words and transforming them
-                  into readable text.
+                  into text.
                 </p>
                 <div className="card-actions justify-end">
                   <Link

@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { CopyBlock, dracula } from "react-code-blocks";
 
 const page = () => {
   return (
@@ -25,9 +26,18 @@ const page = () => {
         <div className="col-span-8">
           <div className="col-span-8 p-10">
             <div className="mockup-code p-10">
-              <pre data-prefix="$">
-                <code>npm i tailwind</code>
-              </pre>
+              <CopyBlock
+                text={`<div id="toxicity-plugin">
+  <input id="text-input" type="text" />
+  <button id="trigger">Make Prediction</button>
+  <p id="output"></p>
+</div>
+<script type="module" src="http://localhost:5000/script.js"></script>`}
+                language={'html'}
+                theme={dracula}
+                showLineNumbers={true}
+                wrapLongLines={true}
+              />
             </div>
           </div>
         </div>

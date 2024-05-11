@@ -4,19 +4,6 @@ import { CopyBlock, dracula } from "react-code-blocks";
 
 const faceDetection = () => {
 
-  const codeToCopy = `<!doctype html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <title>Vite + React</title>
-    </head>
-    <body>
-      <div id="root"></div>
-      <script type="module" src="/src/main.jsx"></script>
-    </body>
-  </html>`
   return (
     <div>
       <div class="mx-auto max-w-screen">
@@ -48,15 +35,23 @@ const faceDetection = () => {
             Face Detection is a computer vision task that involves automatically identifying and locating human faces within digital images or videos.
           </p>
         </div>
-
-        <div className="place-content-center">
-          <CopyBlock
-            text={codeToCopy}
-            language={'html'}
-            theme={dracula}
-            showLineNumbers={true}
-            wrapLongLines={true}
-          />
+        <div className="col-span-8">
+          <div className="col-span-8 p-10">
+            <div className="mockup-code p-10">
+              <CopyBlock
+                text={`<div id="toxicity-plugin">
+  <input id="text-input" type="text" />
+  <button id="trigger">Make Prediction</button>
+  <p id="output"></p>
+</div>
+<script type="module" src="http://localhost:5000/script.js"></script>`}
+                language={'html'}
+                theme={dracula}
+                showLineNumbers={true}
+                wrapLongLines={true}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
