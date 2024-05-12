@@ -39,7 +39,8 @@ const manageUser = () => {
 
 
   const displayUser = () => {
-    return (<table className="w-full table-auto text-sm text-left">
+    return (
+    <table className="w-full table-auto text-sm text-left">
       <thead className="bg-gray-50 text-gray-600 font-medium border-b">
         <tr>
           <th className="py-3 px-6">Username</th>
@@ -68,17 +69,16 @@ const manageUser = () => {
         ))}
       </tbody>
     </table>
-
     )
   }
 
   return (
     <div>
       <div className="max-w-screen-lg mx-auto px-4 md:px-8">
-        <div className="items-start justify-center md:flex">
+        <div className="flex justify-center md:flex">
           <div className="max-w-lg mt-10">
             <h3 className="text-white text-xl font-bold sm:text-2xl ">
-              Users List
+              User Management
             </h3>
           </div>
         </div>

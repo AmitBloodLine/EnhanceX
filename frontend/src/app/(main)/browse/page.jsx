@@ -6,22 +6,6 @@ import React from "react";
 const page = () => {
   return (
     <div>
-      <div className="hero bg-white dark:bg-gray-900 h-96">
-        <img
-          src=""
-          alt=""
-        />
-        <div className="text-center">
-          <div className="max-w-md">
-            <h1 className="text-5xl font-bold">Hello there</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-          </div>
-        </div>
-      </div>
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 
         <div class="mt-16 grid grid-cols sm:grid-cols md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap- p-4">
@@ -34,7 +18,7 @@ const page = () => {
                   alt="card"
                 />
               </figure>
-              <div className="card-body">
+              <div className="card-body h-72">
                 <h2 className="card-title text-white">Face Detection</h2>
                 <p className="text-white py-4">
                   Face Detection is a computer vision task that involves automatically identifying and locating human faces within digital images or videos.
@@ -59,11 +43,10 @@ const page = () => {
                   alt="card"
                 />
               </figure>
-              <div className="card-body">
+              <div className="card-body h-72">
                 <h2 className="card-title text-white">Gesture Recognition</h2>
                 <p className="text-white py-4">
-                  Gesture recognition is a specialized field within computer vision
-                  and machine learning. It revolves around the identification and
+                  Gesture recognition revolves around the identification and
                   interpretation of human gestures.
                 </p>
                 <div className="card-actions justify-end">
@@ -86,7 +69,7 @@ const page = () => {
                   alt="card"
                 />
               </figure>
-              <div className="card-body">
+              <div className="card-body h-72">
                 <h2 className="card-title text-white">Text Toxicity</h2>
                 <p className="text-white py-4">
                   The system or component in question is crafted to handle models
@@ -112,12 +95,11 @@ const page = () => {
                 alt="card"
               />
             </figure>
-            <div className="card-body">
+            <div className="card-body h-72">
               <h2 className="card-title text-white">Image Classification</h2>
               <p className="text-white py-4">
                 An image classification module is designed to recognize different
-                types or classes of images. Its primary function involves labeling
-                photographs based on their content.
+                types or classes of images.
               </p>
               <div className="card-actions justify-end">
                 <Link
@@ -139,13 +121,12 @@ const page = () => {
                   alt="card"
                 />
               </figure>
-              <div className="card-body">
+              <div className="card-body h-72">
                 <h2 className="card-title text-white">Speech Recognition</h2>
                 <p className="text-white py-4">
-                  The model converts spoken words into text, facilitating functions
-                  such as virtual assistants and live captioning.t operates as a
+                  The model converts spoken words into text, it operates as a
                   program capable of recognizing spoken words and transforming them
-                  into readable text.
+                  into text.
                 </p>
                 <div className="card-actions justify-end">
                   <Link
@@ -158,10 +139,6 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div class=" p-4">
-            <p className="">Some Content</p>
-          </div>
-
         </div>
       </div>
 
