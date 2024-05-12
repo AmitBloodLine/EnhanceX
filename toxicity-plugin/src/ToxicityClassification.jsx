@@ -10,9 +10,8 @@ const ToxicityPlugin = ({
   let model;
   // const [text, setText] = useState('');
   const [predictions, setPredictions] = useState(null)
-  let inputElement = document.getElementById('text-input');
   let outputElement = document.getElementById('output');
-
+  
   useEffect(() => {
     let buttonElement = document.getElementById('trigger');
     buttonElement.disabled = true;
@@ -27,6 +26,7 @@ const ToxicityPlugin = ({
   }, []);
 
   async function predict() {
+    let inputElement = document.getElementById('text-input');
     console.log('predicting...');
     console.log(inputElement.value);
     const predictions = await model.classify(inputElement.value);
