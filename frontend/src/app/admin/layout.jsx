@@ -1,11 +1,11 @@
 import React from 'react'
-import AdminDashboard from './dashboard/page'
+import AdminSidebar from './AdminSidebar';
 
 
 const Layout = ({ children }) => {
     return (
         <>
-           <AdminDashboard/>
+           <AdminSidebar/>
             {children}
         </>
     )

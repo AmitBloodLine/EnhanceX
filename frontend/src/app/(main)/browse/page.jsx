@@ -6,22 +6,6 @@ import React from "react";
 const page = () => {
   return (
     <div>
-      <div className="hero bg-white dark:bg-gray-900 h-96">
-        <img
-          src=""
-          alt=""
-        />
-        <div className="text-center">
-          <div className="max-w-md">
-            <h1 className="text-5xl font-bold">Hello there</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-          </div>
-        </div>
-      </div>
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 
         <div class="mt-16 grid grid-cols sm:grid-cols md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap- p-4">
@@ -155,10 +139,6 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div class=" p-4">
-            <p className="">Some Content</p>
-          </div>
-
         </div>
       </div>
 
