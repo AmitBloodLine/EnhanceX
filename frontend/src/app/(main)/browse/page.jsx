@@ -5,12 +5,11 @@ import React from "react";
 
 const page = () => {
   return (
-    <div>
+    <div className="bg-gray-800">
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-
         <div class="mt-16 grid grid-cols sm:grid-cols md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap- p-4">
-          <div class=" p-4">
-            <div className="card bg-gray-800 shadow-lg shadow-cyan-500/50">
+          <div class="p-4">
+            <div className="card shadow-md hover:shadow-cyan-500/50">
               <figure>
                 <img
                   className="h-60 object-cover w-full"
@@ -35,7 +34,7 @@ const page = () => {
             </div>
           </div>
           <div class=" p-4">
-            <div className="card bg-gray-800 shadow-lg shadow-cyan-500/50">
+            <div className="card shadow-md hover:shadow-cyan-500/50">
               <figure>
                 <img
                   className="h-60 object-cover w-full"
@@ -61,7 +60,7 @@ const page = () => {
             </div>
           </div>
           <div class=" p-4">
-            <div className="card bg-gray-800 shadow-lg shadow-cyan-500/50">
+            <div className="card shadow-md hover:shadow-cyan-500/50">
               <figure>
                 <img
                   className="h-60 object-cover w-full"
@@ -87,33 +86,34 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div class=" p-4"> <div className="card bg-gray-800 shadow-lg shadow-cyan-500/50">
-            <figure>
-              <img
-                className="h-60 object-cover"
-                src="https://assets-global.website-files.com/614c82ed388d53640613982e/6475ee4ab445d8fcfe8b8c45_what%20is%20image%20classification.webp"
-                alt="card"
-              />
-            </figure>
-            <div className="card-body h-72">
-              <h2 className="card-title text-white">Image Classification</h2>
-              <p className="text-white py-4">
-                An image classification module is designed to recognize different
-                types or classes of images.
-              </p>
-              <div className="card-actions justify-end">
-                <Link
-                  href="/plugins/image-classification"
-                  className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
-                >
-                  Plugin Details
-                </Link>
+          <div class=" p-4">
+            <div className="card shadow-md hover:shadow-cyan-500/50">
+              <figure>
+                <img
+                  className="h-60 object-cover"
+                  src="https://assets-global.website-files.com/614c82ed388d53640613982e/6475ee4ab445d8fcfe8b8c45_what%20is%20image%20classification.webp"
+                  alt="card"
+                />
+              </figure>
+              <div className="card-body h-72">
+                <h2 className="card-title text-white">Image Classification</h2>
+                <p className="text-white py-4">
+                  An image classification module is designed to recognize different
+                  types or classes of images.
+                </p>
+                <div className="card-actions justify-end">
+                  <Link
+                    href="/plugins/image-classification"
+                    className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
+                  >
+                    Plugin Details
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-          </div>
           <div class=" p-4">
-            <div className="card bg-gray-800 shadow-lg shadow-cyan-500/50">
+          <div className="card shadow-md hover:shadow-cyan-500/50">
               <figure>
                 <img
                   className="h-60 object-cover"

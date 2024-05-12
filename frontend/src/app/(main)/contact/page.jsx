@@ -43,12 +43,8 @@ const Contact = () => {
     },
   });
   return (
-    <div
-    className="h-screen bg-opacity-25 bg-cover"
-        style={{
-          backgroundImage: `url(' ')`,
-        }}>
-      <div className="py-10 sm:py-8 lg:py-12 bg-gray-50 dark:bg-gray-800">
+    <div>
+      <div className="py-10 sm:py-8 lg:py-12 bg-cyan-100 dark:bg-gray-800">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           {/* text - start */}
           <div className="mb-10 md:mb-16">
@@ -78,7 +74,7 @@ const Contact = () => {
                 id="fname"
                 value={contactForm.values.fname}
                 onChange={contactForm.handleChange}
-                className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+                className="w-full rounded border bg-cyan-100 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
               />
               {contactForm.touched.fname && (
                 <span className="text-red">{contactForm.errors.fname}</span>
@@ -96,7 +92,7 @@ const Contact = () => {
                 id="lname"
                 value={contactForm.values.lname}
                 onChange={contactForm.handleChange}
-                className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+                className="w-full rounded border bg-cyan-100 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
               />
               {contactForm.touched.lname && (
                 <span className="text-red">{contactForm.errors.lname}</span>
@@ -115,7 +111,7 @@ const Contact = () => {
                 id="email"
                 value={contactForm.values.email}
                 onChange={contactForm.handleChange}
-                className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+                className="w-full rounded border bg-cyan-100 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
               />
               {contactForm.touched.email && (
                 <span className="text-red">{contactForm.errors.email}</span>
@@ -133,7 +129,7 @@ const Contact = () => {
                 id="number"
                 value={contactForm.values.number}
                 onChange={contactForm.handleChange}
-                className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+                className="w-full rounded border bg-cyan-100 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
               />
               {contactForm.touched.number && (
                 <span className="text-red">{contactForm.errors.number}</span>
@@ -151,7 +147,7 @@ const Contact = () => {
                 id="message"
                 value={contactForm.values.message}
                 onChange={contactForm.handleChange}
-                className="h-64 w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+                className="h-64 w-full rounded border bg-cyan-100 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
                 defaultValue={""}
               />
               {contactForm.touched.message && (

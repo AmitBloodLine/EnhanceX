@@ -11,7 +11,7 @@ const about = () => {
             <img
               src="https://images.unsplash.com/photo-1705087057975-745ab6bf9086?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               loading="lazy"
-              alt="Photo by Fakurian Design"
+              alt="image"
               class="absolute inset-0 h-full w-full object-cover object-center"
             />
 
@@ -19,23 +19,16 @@ const about = () => {
 
             <div class="relative flex flex-col items-center p-4 sm:max-w-xl">
               <h1 class="mb-8 text-center text-4xl font-bold text-white sm:text-5xl md:mb-12 md:text-6xl">
-                Revolutionary way to build the web
+                Easy way to build the website
               </h1>
-              <p class="mb-4 text-center text-lg text-indigo-200 sm:text-xl md:mb-8">
-                Content goes here
-              </p>
+              
             </div>
           </section>
           <div class="bg-white py-6 sm:py-8 lg:py-12">
             <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-              <h2 class="mb-4 text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
-                Revolutionary way to build the web
-              </h2>
 
               <p class="max-w-screen-md text-gray-500 md:text-lg">
-                This is a section of some simple filler text, also known as
-                placeholder text. It shares some characteristics of a real
-                written text but is random or otherwise generated.
+              We provide add-ons for websites, offering extra features without needing to build them from scratch. They make it easy to add AI features to a website, saving time and effort in development.
               </p>
             </div>
           </div>

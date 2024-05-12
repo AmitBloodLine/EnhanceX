@@ -61,8 +61,13 @@ export default function Login() {
   return (
     <>
       <main>
-        <div className="container mx-auto px-4">
-          <div className="flex justify-center">
+        <div className="lg:col-span-6">
+            <img
+              className="h-screen"
+              src="/assets/login.svg"
+              alt="home image"
+            />
+          <div className="flex justify-end">
             <div className="w-full lg:w-4/12 mx-8 my-20">
               <div className="w-full mb-6 shadow-md shadow-yellow-400 rounded-lg bg-gray-300 border-0">
                 <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
