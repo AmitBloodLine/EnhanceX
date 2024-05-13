@@ -6,15 +6,21 @@ const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
 
-    const currentuser = JSON.parse(sessionStorage.getItem('user'));
+    const currentuser = JSON.parse(localStorage.getItem('user'));
     const [loggedIn, setLoggedIn] = useState(currentuser !== null);
+
+   
+
     const router = useRouter();
 
     const logout = () => {
-        sessionStorage.removeItem('user');
+        localStorage.removeItem('user');
         setLoggedIn(false);
         router.push('/');
+        document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     }
+
+    
     
     return (
         <UserContext.Provider value={{

@@ -64,16 +64,14 @@ const FeedBackForm = () => {
   return (
 
     <div>
-      <div class="bg-white py-6 sm:py-8 lg:py-12">
+      <div class="bg-gray-800 py-6 sm:py-8 lg:py-12">
         <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
           <div class="mb-10 md:mb-16">
-            <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
+            <h2 class="mb-4 text-center text-2xl font-bold text-violet-400 md:mb-6 lg:text-3xl">
               Give Us Your Feedback
             </h2>
-            <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
-              This is a section of some simple filler text, also known as
-              placeholder text. It shares some characteristics of a real written
-              text but is random or otherwise generated.
+            <p className="mx-auto max-w-screen-md text-center text-gray-200 md:text-lg">
+              Hi, how was your experience with our plugins? To help us make it even better, please leave a review below. Thanks!
             </p>
           </div>
 
@@ -84,7 +82,7 @@ const FeedBackForm = () => {
             <div>
               <label
                 for="first-name"
-                class="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+                class="mb-2 inline-block text-sm text-gray-200 sm:text-base"
               >
                 Username
               </label>
@@ -93,7 +91,7 @@ const FeedBackForm = () => {
                 id="username"
                 value={FeedBackForm.values.username}
                 onChange={FeedBackForm.handleChange}
-                class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+                class="w-full rounded border bg-cyan-100 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
               />
               {FeedBackForm.touched.username && (
                 <span className="text-red">{FeedBackForm.errors.username}</span>
@@ -103,7 +101,7 @@ const FeedBackForm = () => {
             <div>
               <label
                 for="email"
-                class="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+                class="mb-2 inline-block text-sm text-gray-200 sm:text-base"
               >
                 Email
               </label>
@@ -112,7 +110,7 @@ const FeedBackForm = () => {
                 id="email"
                 value={FeedBackForm.values.email}
                 onChange={FeedBackForm.handleChange}
-                class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+                class="w-full rounded border bg-cyan-100 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
               />
               {FeedBackForm.touched.email && (
                 <span className="text-red">{FeedBackForm.errors.email}</span>
@@ -122,7 +120,7 @@ const FeedBackForm = () => {
             <div class="sm:col-span-2">
               <label
                 for="message"
-                class="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+                class="mb-2 inline-block text-sm text-gray-200 sm:text-base"
               >
                 Message
               </label>
@@ -131,7 +129,7 @@ const FeedBackForm = () => {
                 id="message"
                 value={FeedBackForm.values.message}
                 onChange={FeedBackForm.handleChange}
-                class="h-64 w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300"
+                class="h-64 w-full rounded border bg-cyan-100 px-3 py-2 text-gray-800 outline-none ring-indigo-300"
               >
                 {FeedBackForm.touched.message && (
                   <span className="text-red">
@@ -141,7 +139,7 @@ const FeedBackForm = () => {
               </textarea>
             </div>
 
-            <div className="bg-white py-6 flex justify-start">
+            <div className="bg-gray-800 py-6 flex justify-start">
               <ReactStars
                 rating={rating}
                 onChange={setRating}
@@ -162,9 +160,9 @@ const FeedBackForm = () => {
         </div>
       </div>
 
-      <div className="bg-white py-6 sm:py-8">
+      <div className="bg-gray-800 py-6 sm:py-8">
         <div className="mx-auto max-w-screen-md px-4 md:px-8">
-          <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl xl:mb-12">
+          <h2 className="mb-4 text-center text-2xl font-bold text-gray-200 md:mb-8 lg:text-3xl xl:mb-12">
             User's Review
           </h2>
           <div className="divide-y">

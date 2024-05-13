@@ -1,8 +1,41 @@
+'use client';
+import useUserContext from "@/context/UserContext";
 import Link from "next/link";
 import React from "react";
 
 const AdminSidebar = () => {
+  const {loggedIn, logout} = useUserContext();
+  console.log(loggedIn);
+
+  const showLoggedIn = () => {
+   if(loggedIn){
+    return(
+      <li>
+      <button
+        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm rounded-lg dark:hover:bg-cyan-900 dark:hover:text-neutral-300 w-full"
+        onClick={logout}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-5 h-5">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+        </svg>
+        Logout
+      </button>
+    </li>
+    )
+   }
+  }
+
   return (
+
+    
 
     <>
       {/* Navigation Toggle */}
@@ -87,41 +120,6 @@ const AdminSidebar = () => {
               </Link>
 
             </li>
-            <li className="hs-accordion" id="account-accordion">
-              <Link
-                href="#">
-                <button
-                  type="button"
-                  className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm rounded-lg dark:hover:bg-cyan-900 dark:hover:text-neutral-300 w-full"
-                >
-                  <svg
-                    className="size-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={24}
-                    height={24}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx={18} cy={15} r={3} />
-                    <circle cx={9} cy={7} r={4} />
-                    <path d="M10 15H6a4 4 0 0 0-4 4v2" />
-                    <path d="m21.7 16.4-.9-.3" />
-                    <path d="m15.2 13.9-.9-.3" />
-                    <path d="m16.6 18.7.3-.9" />
-                    <path d="m19.1 12.2.3-.9" />
-                    <path d="m19.6 18.7-.4-1" />
-                    <path d="m16.8 12.3-.4-1" />
-                    <path d="m14.3 16.6 1-.4" />
-                    <path d="m20.7 13.8 1-.4" />
-                  </svg>
-                  Inbox
-                </button>
-              </Link>
-            </li>
 
             <li>
               <Link
@@ -146,6 +144,11 @@ const AdminSidebar = () => {
                 Manage Feedback
               </Link>
             </li>
+
+           {
+            showLoggedIn()
+           }
+
           </ul>
         </nav>
       </div>

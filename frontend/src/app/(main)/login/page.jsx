@@ -40,12 +40,21 @@ export default function Login() {
             });
             response.json().then((data) => {
               console.log(data);
-              sessionStorage.setItem("user", JSON.stringify(data));
-              router.push("/browse");
+              localStorage.setItem("user", JSON.stringify(data));
+              document.cookie = `token=${data.token}`
+              if(data.role === "admin"){
+                localStorage.setItem("admin", JSON.stringify(data));
+                router.push("/admin/manageuser")
+
+              }else{
+                localStorage.setItem("user", JSON.stringify(data));
+
+                router.push("/browse");
+              }
             });
 
 
-          } else {
+          } else if(response.status === 400) {
             enqueueSnackbar("Something went wrong", { variant: "error" });
           }
         })
@@ -60,11 +69,11 @@ export default function Login() {
 
   return (
     <>
-      <main>
-        <div className="container mx-auto px-4">
+      <main className="dark:bg-gray-900 h-screen">
+        <div className="lg:col-span-6">
           <div className="flex justify-center">
             <div className="w-full lg:w-4/12 mx-8 my-20">
-              <div className="w-full mb-6 shadow-md shadow-yellow-400 rounded-lg bg-gray-300 border-0">
+              <div className="w-full mb-6 shadow-md rounded-lg bg-gray-300 border-0">
                 <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                   {/*add grid*/}
                   <form onSubmit={loginForm.handleSubmit}>
