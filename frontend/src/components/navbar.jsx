@@ -13,7 +13,7 @@ const Navbar = () => {
         <div class="sm:order-3 flex items-center gap-x-2">
              <button
             type="button"
-            class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-blue-600 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-900 dark:border-neutral-700 dark:text-blue-500 dark:hover:bg-white-800"
+            class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-red-200 bg-white text-white-600 shadow-sm hover:bg-red-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-red-900 dark:border-red-700 dark:text-white-500 dark:hover:bg-red-800"
             onClick={logout}
           >
             Logout
