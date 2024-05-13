@@ -69,7 +69,7 @@ export default function Login() {
 
   return (
     <>
-      <main>
+      <main className="dark:bg-gray-900 h-screen">
         <div className="lg:col-span-6">
           <div className="flex justify-center">
             <div className="w-full lg:w-4/12 mx-8 my-20">

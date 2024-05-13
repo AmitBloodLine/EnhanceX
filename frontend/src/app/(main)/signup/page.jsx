@@ -56,30 +56,16 @@ export default function Signup() {
 
   return (
     <>
-      <main>
+      <main className="dark:bg-gray-900 h-screen">
         <div className="container mx-auto">
-          <div className="flex justify-center">
+          <div className="flex justify-center pt-14">
             <div className="w-full lg:w-4/12 mx-8 my-15">
               <div className=" w-full shadow-lg rounded-lg bg-gray-300">
                 <div className="rounded-t mb-0 px-6 py-6">
                   <div className="text-center mb-3">
-                    <h6 className="text-gray-600 text-sm font-bold">
-                      Sign in with
+                    <h6 className="text-gray-600 text-lg font-bold">
+                      Sign in
                     </h6>
-                  </div>
-                  <div className="btn-wrapper text-center">
-                    <button
-                      className="bg-white active:bg-gray-100 text-gray-800 px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs"
-                      type="button"
-                      style={{ transition: "all .15s ease" }}
-                    >
-                      <img
-                        alt="..."
-                        className="w-5 mr-1"
-                        src="/assets/google.svg"
-                      />
-                      Google
-                    </button>
                   </div>
                   <hr className="mt-6 border-b-1 border-gray-400" />
                 </div>

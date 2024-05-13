@@ -67,7 +67,7 @@ const FeedBackForm = () => {
       <div class="bg-gray-800 py-6 sm:py-8 lg:py-12">
         <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
           <div class="mb-10 md:mb-16">
-            <h2 class="mb-4 text-center text-2xl font-bold text-gray-200 md:mb-6 lg:text-3xl">
+            <h2 class="mb-4 text-center text-2xl font-bold text-violet-400 md:mb-6 lg:text-3xl">
               Give Us Your Feedback
             </h2>
             <p className="mx-auto max-w-screen-md text-center text-gray-200 md:text-lg">
