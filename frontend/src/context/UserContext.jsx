@@ -14,6 +14,7 @@ export const UserProvider = ({ children }) => {
         localStorage.removeItem('user');
         setLoggedIn(false);
         router.push('/');
+        document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     }
     
     return (

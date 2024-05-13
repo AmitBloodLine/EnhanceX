@@ -3,8 +3,10 @@ import { cookies } from "next/headers";
 
 
 export async function middleware(req, res) {
+    console.log('middleware');
     const cookieStore = cookies()
     const token = cookieStore.get('token') || '';
+    console.log(token);
     const ApiResponse = await fetch('http://localhost:5000/user/authorise', {
         headers: {
             'x-auth-token': token.value
@@ -19,5 +21,5 @@ export async function middleware(req, res) {
 }
 
 export const config = {
-    matcher: ['/user/:path*']
+    matcher: ['/plugins/:path*']
 }

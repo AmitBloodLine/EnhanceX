@@ -41,7 +41,7 @@ export default function Login() {
             response.json().then((data) => {
               console.log(data);
               localStorage.setItem("user", JSON.stringify(data));
-              document.cookie = `token${data.token}`
+              document.cookie = `token=${data.token}`
               router.push("/browse");
             });
 
