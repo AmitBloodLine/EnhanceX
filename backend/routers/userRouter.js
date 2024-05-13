@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Model = require('../models/userModel');
+const verifyToken = require('./verifyToken')
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
 
@@ -77,6 +78,10 @@ router.post("/authenticate", (req, res) => {
             res.status(502).json({ status: "failed" });
         });
 });
+
+router.get("/authorise", verifyToken, (req,res) => {
+res.status(200).json({allowed:true});
+})
 
 
 module.exports = router;
