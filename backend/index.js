@@ -11,7 +11,7 @@ const UtilRouter = require("./routers/util")
 
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: '*',
   })
 );
 
