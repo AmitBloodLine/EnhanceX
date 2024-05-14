@@ -39,12 +39,9 @@ const faceDetection = () => {
           <div className="col-span-8 p-10">
             <div className="mockup-code p-10">
               <CopyBlock
-                text={`<div id="toxicity-plugin">
-  <input id="text-input" type="text" />
-  <button id="trigger">Make Prediction</button>
-  <p id="output"></p>
-</div>
-<script type="module" src="http://localhost:5000/script.js"></script>`}
+                text={`<div id="face-detection-plugin"></div>
+                <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script type="module" src="http://localhost:5000/face_detection_script.js"></script>`}
                 language={'html'}
                 theme={dracula}
                 showLineNumbers={true}
