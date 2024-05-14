@@ -26,11 +26,12 @@ const page = () => {
             comment sections, and other online communities.
           </p>
         </div>
-        <div className="col-span-8">
-          <div className="col-span-8 p-10">
-            <div className="mockup-code p-10">
-              <CopyBlock
-                text={`<div id="toxicity-plugin">
+      </div>
+      <div className="col-span-8">
+        <div className="col-span-8 p-10">
+          <div className="mockup-code p-10">
+            <CopyBlock
+              text={`<div id="toxicity-plugin">
   <input id="text-input" type="text" />
   <button id="trigger">Make Prediction</button>
   <p id="output"></p>
@@ -38,12 +39,11 @@ const page = () => {
 <script type="module" src="http://localhost:5000/toxicity-script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>`}
-                language={'html'}
-                theme={dracula}
-                showLineNumbers={true}
-                wrapLongLines={true}
-              />
-            </div>
+              language={'html'}
+              theme={dracula}
+              showLineNumbers={true}
+              wrapLongLines={true}
+            />
           </div>
         </div>
       </div>

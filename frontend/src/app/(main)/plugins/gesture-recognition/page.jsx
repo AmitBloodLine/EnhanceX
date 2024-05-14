@@ -44,12 +44,20 @@ const gestureRecognition = () => {
           <div className="col-span-8 p-10">
             <div className="mockup-code p-10">
               <CopyBlock
-                text={`<div id="toxicity-plugin">
-  <input id="text-input" type="text" />
-  <button id="trigger">Make Prediction</button>
-  <p id="output"></p>
-</div>
-<script type="module" src="http://localhost:5000/script.js"></script>`}
+                text={`<!doctype html>
+                <html lang="en">
+                  <head>
+                    <meta charset="UTF-8" />
+                    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                    <title>Gesture Recognition</title>
+                  </head>
+                  <body>
+                    <div id="root"></div>
+                    <script type="module" src="/src/main.jsx"></script>
+                  </body>
+                </html>
+                `}
                 language={'html'}
                 theme={dracula}
                 showLineNumbers={true}
